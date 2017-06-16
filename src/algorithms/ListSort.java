@@ -1,11 +1,17 @@
-package task_18;
+package algorithms;
 
-import task_17.DLNode;
+import stuctures.DLNode;
 
 /**
  * Created by Zulus on 15.01.2017.
  */
 public class ListSort {
+    /**
+     * поиск максимального узла
+     *
+     * @param head
+     * @return
+     */
     public static DLNode getMax(DLNode head) {
         DLNode max = head;
         if (head != null) {
@@ -19,6 +25,12 @@ public class ListSort {
         return max;
     }
 
+    /**
+     * соритировка выборкой
+     *
+     * @param head
+     * @return
+     */
     public static DLNode selectionSort(DLNode head) {
         if (head == null) return null;
         else {
@@ -32,6 +44,13 @@ public class ListSort {
         }
     }
 
+    /**
+     * вставка в сортированный список
+     *
+     * @param head
+     * @param newNode
+     * @return
+     */
     public static DLNode insertToSortedList(DLNode head, DLNode newNode) {
         DLNode tmpNode = head;
         if (tmpNode == null) return newNode;
@@ -42,6 +61,12 @@ public class ListSort {
         return head;
     }
 
+    /**
+     * соритировка вставкой
+     *
+     * @param head
+     * @return
+     */
     public static DLNode insetrtionSort(DLNode head) {
         DLNode s = null;
         while (head != null) {

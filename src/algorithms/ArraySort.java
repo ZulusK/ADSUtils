@@ -1,15 +1,19 @@
-package task_9;
+package algorithms;
 
-import task_17.DLNode;
-import task_18.ListSort;
-import task_6.ArrayOperations;
+import stuctures.DLNode;
 
-import static task_6.ArrayOperations.swap;
+import static algorithms.ArrayOperations.swap;
 
 /**
  * Created by Zulus on 13.01.2017.
  */
 public class ArraySort {
+    /**
+     * пузырьковая соритировка с двух концов
+     *
+     * @param arr
+     * @return
+     */
     public static int[] doubleBubleSort(int[] arr) {
         int l = 0;
         int r = arr.length;
@@ -39,6 +43,12 @@ public class ArraySort {
         return arr;
     }
 
+    /**
+     * пузырьковая соритировка
+     *
+     * @param arr
+     * @return
+     */
     public static int[] bubleSort(int[] arr) {
         boolean isSorted = false;
         for (int i = 0; !isSorted && i < arr.length - 2; i++) {
@@ -53,6 +63,12 @@ public class ArraySort {
         return arr;
     }
 
+    /**
+     * соритировка вставкой (Седжвик)
+     *
+     * @param arr
+     * @return
+     */
     public static int[] insertionSortSedj(int[] arr) {
         for (int i = 0; i < arr.length; i++) {
             for (int j = i; j > 0 && arr[j] > arr[j - 1]; j--) {
@@ -62,6 +78,12 @@ public class ArraySort {
         return arr;
     }
 
+    /**
+     * соритировка вставкой(МТИ)
+     *
+     * @param arr
+     * @return
+     */
     public static int[] insertionSortMTI(int[] arr) {
         for (int i = 0; i < arr.length; i++) {
             int tmp = arr[i];
@@ -74,6 +96,14 @@ public class ArraySort {
         return arr;
     }
 
+    /**
+     * поиск минимального значения в массиве
+     *
+     * @param arr
+     * @param start
+     * @param end
+     * @return
+     */
     public static int getMinInd(int[] arr, int start, int end) {
         int minInd = start;
         for (int i = start + 1; i < end; i++) {
@@ -84,6 +114,14 @@ public class ArraySort {
         return minInd;
     }
 
+    /**
+     * поиск максимального значения в массиве
+     *
+     * @param arr
+     * @param start
+     * @param end
+     * @return
+     */
     public static int getMaxInd(int[] arr, int start, int end) {
         int maxInd = start;
         for (int i = start + 1; i < end; i++) {
@@ -94,6 +132,12 @@ public class ArraySort {
         return maxInd;
     }
 
+    /**
+     * соритировка выборкой
+     *
+     * @param arr
+     * @return
+     */
     public static int[] selectionSort(int[] arr) {
         for (int i = 0; i < arr.length - 1; i++) {
             swap(arr, i, getMinInd(arr, i, arr.length));
@@ -101,6 +145,12 @@ public class ArraySort {
         return arr;
     }
 
+    /**
+     * соритировка Шелла ( по Кнуту)
+     *
+     * @param arr
+     * @return
+     */
     public static int[] shellSortKnut(int arr[]) {
         int h = 1;
         while (h <= arr.length / 3) {
@@ -121,6 +171,12 @@ public class ArraySort {
         return arr;
     }
 
+    /**
+     * соритировка Шелла по Седжвику
+     *
+     * @param arr
+     * @return
+     */
     public static int[] shellSortSej(int[] arr) {
         for (int gap = arr.length >> 2; gap > 0; gap >>= 1) {
             for (int i = gap; i < arr.length; i++) {
@@ -135,6 +191,12 @@ public class ArraySort {
         return arr;
     }
 
+    /**
+     * соритировка подсчетом (не стойкая)
+     *
+     * @param arr
+     * @return
+     */
     public static int[] countingSort(int[] arr) {
         int[] counts = new int[arr[getMaxInd(arr, 0, arr.length)] + 1];
         for (int i = 0; i < arr.length; i++) {
@@ -148,6 +210,12 @@ public class ArraySort {
         return arr;
     }
 
+    /**
+     * соритировка подсчетом ( стойкая)
+     *
+     * @param arr
+     * @return
+     */
     public static int[] countingSortStable(int[] arr) {
         int[] counts = new int[arr[getMaxInd(arr, 0, arr.length)] + 1];
         for (int i = 0; i < arr.length; i++) {
@@ -164,6 +232,12 @@ public class ArraySort {
         return brr;
     }
 
+    /**
+     * поразрядная сортировка
+     *
+     * @param arr
+     * @return
+     */
     public static int[] bitRadixSort(int[] arr) {
         int mask = 1;
         int bits = Integer.SIZE;
@@ -201,6 +275,7 @@ public class ArraySort {
         return arr;
     }
 
+
     public static int[] radixSort(int[] arr, int base, int d) {
         int maxPos = (int) Math.pow(base, d);
         for (int pos = 1; pos <= maxPos; pos *= base) {
@@ -223,6 +298,13 @@ public class ArraySort {
         return arr;
     }
 
+    /**
+     * поразрядная соритировка
+     *
+     * @param in
+     * @param len
+     * @return
+     */
     public static String[] strRadixSort(String[] in, int len) {
         int alphabetSize = 26;
         String[] out = new String[in.length];
@@ -246,6 +328,12 @@ public class ArraySort {
         return in;
     }
 
+    /**
+     * соритировка ячейками
+     *
+     * @param arr
+     * @return
+     */
     public static int[] bucketSort(int[] arr) {
         int max = arr[getMaxInd(arr, 0, arr.length)] + 1;
         DLNode[] buckets = new DLNode[arr.length];
@@ -264,81 +352,6 @@ public class ArraySort {
         }
         return arr;
     }
-//    public static int[] mergeSortButtom(int[] arr){
-//        int size=1;
-//        while (size<arr.length){
-//            int p=0;
-//            while(p<=arr.length-size){
-//                int q=p+size;
-//                int A[] =new int[q-1-p];
-//                int B[] =new int[q-1-p];
-//                arr=int[]  A=new int[];
-//                merge();
-//            }
-//
-//        }
-//        return arr;
-//    }
 
-    public static int[] mergeSort(int[] arr) {
-        if (arr.length > 1) {
-            int m = arr.length / 2;
-            int A[] = new int[m];
-            int B[] = new int[arr.length - m];
-            System.arraycopy(arr, 0, A, 0, m);
-            System.arraycopy(arr, m, B, 0, B.length);
-            A = mergeSort(A);
-            B = mergeSort(B);
-            return merge(A, B);
-        } else {
-            return arr;
-        }
-    }
 
-    private static int[] merge(int[] A, int[] B) {
-        int C[] = new int[A.length + B.length];
-        int i = 0;
-        int j = 0;
-        int k = 0;
-        while (j < A.length && k < B.length) {
-            if (A[j] < B[k]) {
-                C[i] = A[j];
-                j++;
-            } else {
-                C[i] = B[k];
-                k++;
-            }
-            i++;
-        }
-        if (j < A.length) {
-            System.arraycopy(A, j, C, i, A.length - j);
-        } else {
-            System.arraycopy(B, k, C, i, B.length - k);
-        }
-        return C;
-    }
-
-    private static int partition(int[] arr, int l, int r) {
-        int pivot=arr[r];
-        int i=l-1;
-        for(int j=l; j<r;j++){
-            if(arr[j]<=pivot){
-                i++;
-                swap(arr,i,j);
-
-            }
-        }
-        swap(arr,i+1,r);
-        return i+1;
-    }
-
-    public static int[] quickSort(int[] arr, int l, int r) {
-        if (l < r) {
-            int pivot = partition(arr, l, r);
-//            System.out.println(pivot+" ");
-            quickSort(arr, l, pivot - 1);
-            quickSort(arr, pivot + 1, r);
-        }
-        return arr;
-    }
 }

@@ -1,4 +1,4 @@
-package task_6;
+package algorithms;
 
 import java.util.Random;
 
@@ -6,6 +6,14 @@ import java.util.Random;
  * Created by Zulus on 13.01.2017.
  */
 public class ArrayOperations {
+    /**
+     * получить рандомизированный массив int
+     *
+     * @param size
+     * @param min
+     * @param max
+     * @return
+     */
     public static int[] getRandomizeArray(int size, int min, int max) {
         int[] arr = new int[size];
         Random rnd = new Random();
@@ -16,7 +24,14 @@ public class ArrayOperations {
         return arr;
     }
 
-    public static int find(int[] arr, int val) {
+    /**
+     * линейный поиск
+     *
+     * @param arr
+     * @param val
+     * @return
+     */
+    public static int indexOf(int[] arr, int val) {
         int i = 0;
         for (i = arr.length; i >= 0 && arr[i] != val; i--) ;
         return i;
@@ -30,6 +45,12 @@ public class ArrayOperations {
         System.out.println();
     }
 
+    /**
+     * получить произведение всех элементов
+     *
+     * @param arr
+     * @return
+     */
     public static long getMultiply(int[] arr) {
         long m = 1;
         for (int a : arr) {
@@ -38,6 +59,12 @@ public class ArrayOperations {
         return m;
     }
 
+    /**
+     * получить сумму элементов
+     *
+     * @param arr
+     * @return
+     */
     public static long getSum(int[] arr) {
         long sum = 0;
         for (int a : arr) {
@@ -46,6 +73,12 @@ public class ArrayOperations {
         return sum;
     }
 
+    /**
+     * среднее значение элементов массива
+     *
+     * @param arr
+     * @return
+     */
     public static double getAverage(int[] arr) {
         if (arr.length == 0) {
             return Double.NaN;
@@ -53,6 +86,13 @@ public class ArrayOperations {
         return getSum(arr) / (double) arr.length;
     }
 
+    /**
+     * поменять элементы местами
+     *
+     * @param arr
+     * @param i
+     * @param j
+     */
     public static void swap(int[] arr, int i, int j) {
         if (i != j) {
             int buf = arr[i];
@@ -61,6 +101,13 @@ public class ArrayOperations {
         }
     }
 
+    /**
+     * получить массив заполненый числами по возрастанию, начиная со start
+     *
+     * @param size
+     * @param start
+     * @return
+     */
     public static int[] getArray(int size, int start) {
         if (size < 0) size = 0;
         int[] arr = new int[size];
@@ -70,6 +117,12 @@ public class ArrayOperations {
         return arr;
     }
 
+    /**
+     * перемешать массив
+     *
+     * @param arr
+     * @return
+     */
     public static int[] shuffle(int[] arr) {
         Random rnd = new Random();
         int size = arr.length;
@@ -95,6 +148,12 @@ public class ArrayOperations {
         System.out.println();
     }
 
+    /**
+     * реверс массива
+     *
+     * @param arr
+     * @return
+     */
     public static int[] reverse(int[] arr) {
         for (int i = 0, mid = arr.length >> 1, j = arr.length - 1; i < mid; i++, j--) {
             swap(arr, i, j);
@@ -102,33 +161,27 @@ public class ArrayOperations {
         return arr;
     }
 
-    public static long[] getFibonachi(int count) {
-        long[] arr = new long[count];
-        arr[0] = arr[1] = 1;
-        for (int i = 2; i < count; i++) {
-            arr[i] = arr[i - 1] + arr[i - 2];
-        }
-        return arr;
-    }
-
-    public static int[] getPrimeNumbers(int max) {
-        int start = 2;
-        int count = 0;
-        int arr[] = getArray(max + 1, 0);
-
-        for (int i = start; i < arr.length; i++) {
-            if (arr[i] != 0) {
-                count++;
-                for (int j = i * i; j < arr.length; j += arr[i]) {
-                    arr[j] = 0;
-                }
+    private static boolean isSorted_decr(int[] arr) {
+        for (int i = 1; i < arr.length; i++) {
+            if (arr[i - 1] < arr[i]) {
+                return false;
             }
         }
-        if (count == 0) return new int[0];
-        int[] primeArray = new int[count + 1];
-        for (int i = 0, j = 0; j <= count; i++) {
-            if (arr[i] != 0) primeArray[j++] = arr[i];
+        return true;
+    }
+    private static boolean isSorted_incr(int[] arr) {
+        for (int i = 1; i < arr.length; i++) {
+            if (arr[i - 1] > arr[i]) {
+                return false;
+            }
         }
-        return primeArray;
+        return true;
+    }
+    public static boolean isSorted(int[] arr, boolean byIncrease) {
+        if (byIncrease) {
+            return isSorted_incr(arr);
+        } else {
+            return isSorted_decr(arr);
+        }
     }
 }

@@ -1,4 +1,4 @@
-package task_16;
+package stuctures;
 
 /**
  * Created by Zulus on 14.01.2017.
