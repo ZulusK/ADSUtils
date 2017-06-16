@@ -355,24 +355,24 @@ public class ArraySort {
      *
      * @param arr
      */
-    public static void mergesort2(int[] arr) {
-        mergesort2(arr, 0, arr.length-1);
+    public static void mergesortTD(int[] arr) {
+        mergesortTD(arr, 0, arr.length - 1);
     }
 
-    private static void mergesort2(int[] arr, int L, int R) {
+    private static void mergesortTD(int[] arr, int L, int R) {
         if (L < R) {
             int M = (R + L) / 2;
-            mergesort2(arr, L, M);
-            mergesort2(arr, M+1, R);
+            mergesortTD(arr, L, M);
+            mergesortTD(arr, M + 1, R);
             merge(arr, L, M, R);
         }
     }
 
     private static void merge(int[] dst, int L, int M, int R) {
-        int[] left = new int[M - L+1];
+        int[] left = new int[M - L + 1];
         int[] right = new int[R - M];
         System.arraycopy(dst, L, left, 0, left.length);
-        System.arraycopy(dst, M+1, right, 0, right.length);
+        System.arraycopy(dst, M + 1, right, 0, right.length);
         for (int k = L, i = 0, j = 0; k <= R; k++) {
             if (i == left.length) {
                 //check, is left array is empty
@@ -392,18 +392,90 @@ public class ArraySort {
 
     /**
      * merger sort Bottom-Up
+     *
      * @param arr
      */
-    public static void mergesortBD(int arr[]){
-        int chunk=1;
-        while(chunk<arr.length){
-            int pos=0;
-            while(pos<=arr.length-chunk){
-                int mid=pos+chunk-1;
-                merge(arr,pos,mid,Integer.min(mid+chunk,arr.length-1));
-                pos+=chunk*2;
+    public static void mergesortBD(int arr[]) {
+        int chunk = 1;
+        while (chunk < arr.length) {
+            int pos = 0;
+            while (pos <= arr.length - chunk) {
+                int mid = pos + chunk - 1;
+                merge(arr, pos, mid, Integer.min(mid + chunk, arr.length - 1));
+                pos += chunk * 2;
             }
-            chunk*=2;
+            chunk *= 2;
+        }
+    }
+
+    /**
+     * quicksort by Lomuto's algorithm
+     *
+     * @param arr
+     */
+    public static void quicksortL(int arr[]) {
+        quicksortL(arr, 0, arr.length - 1);
+    }
+
+    private static int partition_L(int arr[], int L, int R) {
+        //last element is pivot
+        int pivot = arr[R];
+        //index of end of lower part
+        int i = L - 1;
+        for (int j = L; j <= R - 1; j++) {
+            if (arr[j] <= pivot) {
+                i++;
+                swap(arr, i, j);
+            }
+        }
+        i++;
+        swap(arr, i, R);
+        return i;
+    }
+
+    private static void quicksortL(int arr[], int L, int R) {
+        if (L < R) {
+            int q = partition_L(arr, L, R);
+            quicksortL(arr, L, q - 1);
+            quicksortL(arr, q + 1, R);
+        }
+    }
+
+    /**
+     * quicksort by Hoar's partition
+     *
+     * @param arr
+     */
+    public static void quicksortH(int arr[]) {
+        quicksortH(arr, 0, arr.length - 1);
+    }
+
+    private static int partition_H(int arr[], int L, int R) {
+        int pivot = arr[L];
+        int left = L;
+        int right = R + 1;
+
+        while (true) {
+
+            // decrement the r pointer until you meet the pivot
+            while (left < --right && arr[right] > pivot) ;
+            // increment the p pointer until you meet the pivot
+            while (++left < right && arr[left] < pivot) ;
+            // if the pointers have crossed, swap the items
+            if (left >= right)
+                break;
+            swap(arr, left, right);
+        }
+        // swap pivot and the end of less part
+        swap(arr, right, L);
+        return right;
+    }
+
+    private static void quicksortH(int arr[], int L, int R) {
+        if (L < R) {
+            int q = partition_H(arr, L, R);
+            quicksortH(arr, L, q - 1);
+            quicksortH(arr, q+1, R);
         }
     }
 }
