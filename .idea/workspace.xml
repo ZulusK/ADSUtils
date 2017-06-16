@@ -31,8 +31,8 @@
       <file leaf-file-name="AlgorithmsTest.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/AlgorithmsTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="461">
-              <caret line="97" column="34" lean-forward="true" selection-start-line="97" selection-start-column="34" selection-end-line="98" selection-end-column="40" />
+            <state relative-caret-position="216">
+              <caret line="97" column="54" lean-forward="true" selection-start-line="97" selection-start-column="54" selection-end-line="97" selection-end-column="54" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -43,8 +43,8 @@
       <file leaf-file-name="ArraySort.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/algorithms/ArraySort.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="76">
-              <caret line="469" column="28" lean-forward="true" selection-start-line="469" selection-start-column="28" selection-end-line="469" selection-end-column="28" />
+            <state relative-caret-position="221">
+              <caret line="525" column="0" lean-forward="false" selection-start-line="525" selection-start-column="0" selection-end-line="525" selection-end-column="0" />
               <folding>
                 <element signature="docComment;class#ArraySort#0" expanded="false" />
                 <element signature="docComment;method#doubleBubleSort#0;class#ArraySort#0" expanded="false" />
@@ -81,9 +81,18 @@
                 <element signature="method#merge#0;class#ArraySort#0" expanded="false" />
                 <element signature="docComment;method#mergesortBD#0;class#ArraySort#0" expanded="false" />
                 <element signature="method#mergesortBD#0;class#ArraySort#0" expanded="false" />
+                <element signature="docComment;method#quicksortL#0;class#ArraySort#0" expanded="false" />
                 <element signature="method#partition_L#0;class#ArraySort#0" expanded="false" />
-                <element signature="e#12018#12019#0" expanded="true" />
-                <element signature="e#12068#12069#0" expanded="true" />
+                <element signature="method#quicksortL#1;class#ArraySort#0" expanded="false" />
+                <element signature="docComment;method#quicksortH#0;class#ArraySort#0" expanded="false" />
+                <element signature="method#partition_H#0;class#ArraySort#0" expanded="false" />
+                <element signature="method#quicksortH#1;class#ArraySort#0" expanded="false" />
+                <element signature="docComment;method#quicksortR#0;class#ArraySort#0" expanded="false" />
+                <element signature="method#partition_R#0;class#ArraySort#0" expanded="false" />
+                <element signature="method#quicksortR#1;class#ArraySort#0" expanded="false" />
+                <element signature="docComment;method#quicksortM#0;class#ArraySort#0" expanded="false" />
+                <element signature="method#medianOf3#0;class#ArraySort#0" expanded="false" />
+                <element signature="method#quicksortM#1;class#ArraySort#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -136,6 +145,9 @@
   <component name="JsGulpfileManager">
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="MavenProjectNavigator">
+    <treeState />
   </component>
   <component name="ProjectFrameBounds">
     <option name="x" value="-11" />
@@ -730,7 +742,7 @@
       <workItem from="1497585510709" duration="116000" />
       <workItem from="1497585689096" duration="27000" />
       <workItem from="1497593800888" duration="3667000" />
-      <workItem from="1497623830994" duration="7239000" />
+      <workItem from="1497623830994" duration="9543000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <created>1497584130612</created>
@@ -760,47 +772,53 @@
       <option name="project" value="LOCAL" />
       <updated>1497627691932</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="basic quick sort">
+      <created>1497634560960</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1497634560960</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="AlgorithmsTest - 2017.06.16 at 10h 30m 13s.xml">
+    <history-entry file="AlgorithmsTest - 2017.06.16 at 11h 04m 52s.xml">
       <configuration name="AlgorithmsTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="AlgorithmsTest - 2017.06.16 at 10h 30m 25s.xml">
+    <history-entry file="AlgorithmsTest - 2017.06.16 at 11h 05m 41s.xml">
       <configuration name="AlgorithmsTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="AlgorithmsTest - 2017.06.16 at 10h 30m 51s.xml">
+    <history-entry file="AlgorithmsTest - 2017.06.16 at 11h 07m 59s.xml">
       <configuration name="AlgorithmsTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="AlgorithmsTest - 2017.06.16 at 10h 32m 28s.xml">
+    <history-entry file="AlgorithmsTest - 2017.06.16 at 11h 08m 10s.xml">
       <configuration name="AlgorithmsTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="AlgorithmsTest - 2017.06.16 at 10h 32m 47s.xml">
+    <history-entry file="AlgorithmsTest - 2017.06.16 at 11h 09m 22s.xml">
       <configuration name="AlgorithmsTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="AlgorithmsTest - 2017.06.16 at 10h 34m 31s.xml">
+    <history-entry file="AlgorithmsTest - 2017.06.16 at 11h 10m 41s.xml">
       <configuration name="AlgorithmsTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="AlgorithmsTest - 2017.06.16 at 10h 34m 42s.xml">
+    <history-entry file="AlgorithmsTest - 2017.06.16 at 11h 10m 49s.xml">
       <configuration name="AlgorithmsTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="AlgorithmsTest - 2017.06.16 at 10h 34m 56s.xml">
+    <history-entry file="AlgorithmsTest - 2017.06.16 at 11h 11m 02s.xml">
       <configuration name="AlgorithmsTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="AlgorithmsTest - 2017.06.16 at 10h 35m 08s.xml">
+    <history-entry file="AlgorithmsTest - 2017.06.16 at 11h 11m 20s.xml">
       <configuration name="AlgorithmsTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="AlgorithmsTest - 2017.06.16 at 10h 35m 13s.xml">
+    <history-entry file="AlgorithmsTest - 2017.06.16 at 11h 11m 30s.xml">
       <configuration name="AlgorithmsTest" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="13216000" />
+    <option name="totallyTimeSpent" value="15520000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-11" y="-11" width="1942" height="1046" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -810,7 +828,7 @@
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3289941" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32972974" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3289941" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.40828404" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -818,7 +836,7 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32900944" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.46378377" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.46378377" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24972972" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -887,7 +905,8 @@
     <MESSAGE value="init" />
     <MESSAGE value="разбиение на модули" />
     <MESSAGE value="merge sort" />
-    <option name="LAST_COMMIT_MESSAGE" value="merge sort" />
+    <MESSAGE value="basic quick sort" />
+    <option name="LAST_COMMIT_MESSAGE" value="basic quick sort" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1031,8 +1050,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/AlgorithmsTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="461">
-          <caret line="97" column="34" lean-forward="true" selection-start-line="97" selection-start-column="34" selection-end-line="98" selection-end-column="40" />
+        <state relative-caret-position="216">
+          <caret line="97" column="54" lean-forward="true" selection-start-line="97" selection-start-column="54" selection-end-line="97" selection-end-column="54" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1041,8 +1060,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/algorithms/ArraySort.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="76">
-          <caret line="469" column="28" lean-forward="true" selection-start-line="469" selection-start-column="28" selection-end-line="469" selection-end-column="28" />
+        <state relative-caret-position="221">
+          <caret line="525" column="0" lean-forward="false" selection-start-line="525" selection-start-column="0" selection-end-line="525" selection-end-column="0" />
           <folding>
             <element signature="docComment;class#ArraySort#0" expanded="false" />
             <element signature="docComment;method#doubleBubleSort#0;class#ArraySort#0" expanded="false" />
@@ -1079,9 +1098,18 @@
             <element signature="method#merge#0;class#ArraySort#0" expanded="false" />
             <element signature="docComment;method#mergesortBD#0;class#ArraySort#0" expanded="false" />
             <element signature="method#mergesortBD#0;class#ArraySort#0" expanded="false" />
+            <element signature="docComment;method#quicksortL#0;class#ArraySort#0" expanded="false" />
             <element signature="method#partition_L#0;class#ArraySort#0" expanded="false" />
-            <element signature="e#12018#12019#0" expanded="true" />
-            <element signature="e#12068#12069#0" expanded="true" />
+            <element signature="method#quicksortL#1;class#ArraySort#0" expanded="false" />
+            <element signature="docComment;method#quicksortH#0;class#ArraySort#0" expanded="false" />
+            <element signature="method#partition_H#0;class#ArraySort#0" expanded="false" />
+            <element signature="method#quicksortH#1;class#ArraySort#0" expanded="false" />
+            <element signature="docComment;method#quicksortR#0;class#ArraySort#0" expanded="false" />
+            <element signature="method#partition_R#0;class#ArraySort#0" expanded="false" />
+            <element signature="method#quicksortR#1;class#ArraySort#0" expanded="false" />
+            <element signature="docComment;method#quicksortM#0;class#ArraySort#0" expanded="false" />
+            <element signature="method#medianOf3#0;class#ArraySort#0" expanded="false" />
+            <element signature="method#quicksortM#1;class#ArraySort#0" expanded="false" />
           </folding>
         </state>
       </provider>

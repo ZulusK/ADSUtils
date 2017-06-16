@@ -475,7 +475,61 @@ public class ArraySort {
         if (L < R) {
             int q = partition_H(arr, L, R);
             quicksortH(arr, L, q - 1);
-            quicksortH(arr, q+1, R);
+            quicksortH(arr, q + 1, R);
         }
     }
-}
+
+    /**
+     * RANDOMIZED QUICKSORT
+     *
+     * @param arr
+     */
+    public static void quicksortR(int arr[]) {
+        quicksortR(arr, 0, arr.length - 1);
+    }
+
+    private static int partition_R(int[] arr, int L, int R) {
+        int randPos = (int) (L + Math.random() * (R - L));
+        swap(arr, randPos, R);
+        return partition_L(arr, L, R);
+    }
+
+    private static void quicksortR(int arr[], int L, int R) {
+        if (L < R) {
+            int q = partition_R(arr, L, R);
+            quicksortR(arr, L, q - 1);
+            quicksortR(arr, q + 1, R);
+        }
+    }
+
+    /**
+     * MEDIAN OF 3 QUICKSORT
+     */
+    public static void quicksortM(int arr[]) {
+        quicksortM(arr, 0, arr.length - 1);
+    }
+
+    private static int medianOf3(int arr[], int L, int R){
+        int center=(L+R)/2;
+        if(arr[L]<arr[center]){
+            swap(arr,L,center);
+        }
+        if(arr[L]<arr[R]){
+            swap(arr,L,R);
+        }
+        if(arr[center]<arr[R]){
+            swap(arr,center,R);
+        }
+        swap(arr,center,R);
+        return arr[R];
+    }
+
+    private static void quicksortM(int arr[], int L, int R) {
+        if (L < R) {
+            medianOf3(arr,L,R);
+            int q = partition_L(arr, L, R);
+            quicksortM(arr, L, q-1);
+            quicksortM(arr, q+1, R);
+        }
+    }
+ }
