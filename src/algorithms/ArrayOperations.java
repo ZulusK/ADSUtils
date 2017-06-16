@@ -101,6 +101,17 @@ public class ArrayOperations {
         }
     }
 
+    public static  String[] getStrArray(int size,  int minLength,int maxLength){
+        String[] arr=new String[size];
+        for(int j=0; j<size;j++){
+            int bound=(int)(Math.random()*(maxLength-minLength)+minLength);
+            arr[j]="";
+            for(int i=0; i<bound;i++){
+                arr[j]+=(char)('A'+Math.random()*27);
+            }
+        }
+        return arr;
+    }
     /**
      * получить массив заполненый числами по возрастанию, начиная со start
      *

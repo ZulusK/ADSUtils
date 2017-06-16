@@ -337,9 +337,6 @@ public class ArraySort {
     public static int[] bucketSort(int[] arr) {
         int max = arr[getMaxInd(arr, 0, arr.length)] + 1;
         DLNode[] buckets = new DLNode[arr.length];
-        for (int i = 0; i < buckets.length; i++) {
-            buckets[i] = null;
-        }
         for (int i = 0; i < arr.length; i++) {
             int ind = (int) (buckets.length * arr[i] / (double) max);
             buckets[ind] = ListSort.insertToSortedList(buckets[ind], new DLNode(arr[i]));
