@@ -1,6 +1,6 @@
 package algorithms;
 
-import stuctures.DLNode;
+import structures.DLNode;
 
 import static algorithms.ArrayOperations.swap;
 
@@ -335,18 +335,18 @@ public class ArraySort {
      * @return
      */
     public static int[] bucketSort(int[] arr) {
-        int max = arr[getMaxInd(arr, 0, arr.length)] + 1;
-        DLNode[] buckets = new DLNode[arr.length];
-        for (int i = 0; i < arr.length; i++) {
-            int ind = (int) (buckets.length * arr[i] / (double) max);
-            buckets[ind] = ListSort.insertToSortedList(buckets[ind], new DLNode(arr[i]));
-        }
-        for (int i = 0, j = 0; j < buckets.length; j++) {
-            while (buckets[j] != null) {
-                arr[i++] = buckets[j].data;
-                buckets[j] = DLNode.removeFirst(buckets[j]);
-            }
-        }
+//        int max = arr[getMaxInd(arr, 0, arr.length)] + 1;
+//        DLNode[] buckets = new DLNode[arr.length];
+//        for (int i = 0; i < arr.length; i++) {
+//            int ind = (int) (buckets.length * arr[i] / (double) max);
+//            buckets[ind] = ListSort.insertToSortedList(buckets[ind], new DLNode(arr[i]));
+//        }
+//        for (int i = 0, j = 0; j < buckets.length; j++) {
+//            while (buckets[j] != null) {
+//                arr[i++] = buckets[j].data;
+//                buckets[j] = DLNode.removeFirst(buckets[j]);
+//            }
+//        }
         return arr;
     }
 
