@@ -143,7 +143,7 @@ public class ArrayOperations {
         return arr;
     }
 
-    public static void printArray(int[] arr) {
+    public static void printArray(final int[] arr) {
         if (arr.length == 0) System.out.println("The array is empty");
         for (int i = 0; i < arr.length; i++) {
             System.out.printf("[%d]%d ", i, arr[i]);

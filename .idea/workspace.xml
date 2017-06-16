@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="8dc8066b-1f35-45d0-98be-e473d5554ce1" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Main.java" afterPath="$PROJECT_DIR$/src/Main.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/algorithms/ArrayOperations.java" afterPath="$PROJECT_DIR$/src/algorithms/ArrayOperations.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/algorithms/ArraySort.java" afterPath="$PROJECT_DIR$/src/algorithms/ArraySort.java" />
     </list>
@@ -18,17 +17,24 @@
   <component name="CoverageDataManager">
     <SUITE FILE_PATH="coverage/ADSUtils$AlgorithmsTest.coverage" NAME="AlgorithmsTest Coverage Results" MODIFIED="1497597283456" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_TABLE_DETAILS" value="true" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+  </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
-    <leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="450">
       <file leaf-file-name="Numbers.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/algorithms/Numbers.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-519">
+            <state relative-caret-position="1435">
               <caret line="43" column="29" lean-forward="false" selection-start-line="43" selection-start-column="29" selection-end-line="43" selection-end-column="29" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+              <folding />
             </state>
           </provider>
         </entry>
@@ -36,8 +42,8 @@
       <file leaf-file-name="AlgorithmsTest.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/AlgorithmsTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="531">
-              <caret line="76" column="0" lean-forward="false" selection-start-line="76" selection-start-column="0" selection-end-line="76" selection-end-column="0" />
+            <state relative-caret-position="636">
+              <caret line="85" column="29" lean-forward="false" selection-start-line="85" selection-start-column="29" selection-end-line="85" selection-end-column="29" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -45,12 +51,55 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ArraySearch.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/algorithms/ArraySearch.java">
+      <file leaf-file-name="ArrayOperations.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/algorithms/ArrayOperations.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1610">
-              <caret line="80" column="9" lean-forward="true" selection-start-line="80" selection-start-column="9" selection-end-line="80" selection-end-column="9" />
+            <state relative-caret-position="152">
+              <caret line="145" column="40" lean-forward="false" selection-start-line="145" selection-start-column="40" selection-end-line="145" selection-end-column="40" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ArraySort.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/algorithms/ArraySort.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="251">
+              <caret line="401" column="35" lean-forward="false" selection-start-line="401" selection-start-column="35" selection-end-line="401" selection-end-column="35" />
+              <folding>
+                <element signature="docComment;class#ArraySort#0" expanded="false" />
+                <element signature="docComment;method#doubleBubleSort#0;class#ArraySort#0" expanded="false" />
+                <element signature="method#doubleBubleSort#0;class#ArraySort#0" expanded="false" />
+                <element signature="docComment;method#bubleSort#0;class#ArraySort#0" expanded="false" />
+                <element signature="method#bubleSort#0;class#ArraySort#0" expanded="false" />
+                <element signature="docComment;method#insertionSortSedj#0;class#ArraySort#0" expanded="false" />
+                <element signature="method#insertionSortSedj#0;class#ArraySort#0" expanded="false" />
+                <element signature="docComment;method#insertionSortMTI#0;class#ArraySort#0" expanded="false" />
+                <element signature="method#insertionSortMTI#0;class#ArraySort#0" expanded="false" />
+                <element signature="docComment;method#getMinInd#0;class#ArraySort#0" expanded="false" />
+                <element signature="method#getMinInd#0;class#ArraySort#0" expanded="false" />
+                <element signature="docComment;method#getMaxInd#0;class#ArraySort#0" expanded="false" />
+                <element signature="method#getMaxInd#0;class#ArraySort#0" expanded="false" />
+                <element signature="docComment;method#selectionSort#0;class#ArraySort#0" expanded="false" />
+                <element signature="method#selectionSort#0;class#ArraySort#0" expanded="false" />
+                <element signature="docComment;method#shellSortKnut#0;class#ArraySort#0" expanded="false" />
+                <element signature="method#shellSortKnut#0;class#ArraySort#0" expanded="false" />
+                <element signature="docComment;method#shellSortSej#0;class#ArraySort#0" expanded="false" />
+                <element signature="method#shellSortSej#0;class#ArraySort#0" expanded="false" />
+                <element signature="docComment;method#countingSort#0;class#ArraySort#0" expanded="false" />
+                <element signature="method#countingSort#0;class#ArraySort#0" expanded="false" />
+                <element signature="docComment;method#countingSortStable#0;class#ArraySort#0" expanded="false" />
+                <element signature="method#countingSortStable#0;class#ArraySort#0" expanded="false" />
+                <element signature="docComment;method#bitRadixSort#0;class#ArraySort#0" expanded="false" />
+                <element signature="method#bitRadixSort#0;class#ArraySort#0" expanded="false" />
+                <element signature="method#radixSort#0;class#ArraySort#0" expanded="false" />
+                <element signature="docComment;method#strRadixSort#0;class#ArraySort#0" expanded="false" />
+                <element signature="method#strRadixSort#0;class#ArraySort#0" expanded="false" />
+                <element signature="docComment;method#bucketSort#0;class#ArraySort#0" expanded="false" />
+                <element signature="method#bucketSort#0;class#ArraySort#0" expanded="false" />
+                <element signature="docComment;method#mergesort2#0;class#ArraySort#0" expanded="false" />
+                <element signature="method#mergesort2#1;class#ArraySort#0" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -92,8 +141,8 @@
         <option value="$PROJECT_DIR$/src/algorithms/ListSort.java" />
         <option value="$PROJECT_DIR$/src/Main.java" />
         <option value="$PROJECT_DIR$/src/algorithms/ArrayOperations.java" />
-        <option value="$PROJECT_DIR$/src/algorithms/ArraySort.java" />
         <option value="$PROJECT_DIR$/src/AlgorithmsTest.java" />
+        <option value="$PROJECT_DIR$/src/algorithms/ArraySort.java" />
       </list>
     </option>
   </component>
@@ -129,6 +178,7 @@
     <panes>
       <pane id="Scratches" />
       <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -193,7 +243,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -202,6 +251,7 @@
     <property name="ToolWindowRun.ShowToolbar" value="false" />
     <property name="create.test.in.the.same.root" value="true" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit3" />
+    <property name="com.intellij.database.dataSource.DataSourceTemplate" value="Sqlite (Xerial)" />
   </component>
   <component name="RecentsManager">
     <key name="CreateTestDialog.RecentsKey">
@@ -671,7 +721,8 @@
       <workItem from="1497566110596" duration="2167000" />
       <workItem from="1497585510709" duration="116000" />
       <workItem from="1497585689096" duration="27000" />
-      <workItem from="1497593800888" duration="3578000" />
+      <workItem from="1497593800888" duration="3667000" />
+      <workItem from="1497623830994" duration="3844000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <created>1497584130612</created>
@@ -687,77 +738,84 @@
       <option name="project" value="LOCAL" />
       <updated>1497596110548</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="разбиение на модули">
+      <created>1497597405675</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1497597405675</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="AlgorithmsTest - 2017.06.16 at 00h 07m 56s.xml">
+    <history-entry file="AlgorithmsTest - 2017.06.16 at 08h 31m 07s.xml">
       <configuration name="AlgorithmsTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="AlgorithmsTest - 2017.06.16 at 00h 08m 48s.xml">
+    <history-entry file="AlgorithmsTest - 2017.06.16 at 08h 38m 49s.xml">
       <configuration name="AlgorithmsTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="AlgorithmsTest - 2017.06.16 at 00h 09m 26s.xml">
+    <history-entry file="AlgorithmsTest - 2017.06.16 at 08h 39m 08s.xml">
       <configuration name="AlgorithmsTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="AlgorithmsTest - 2017.06.16 at 00h 10m 36s.xml">
+    <history-entry file="AlgorithmsTest - 2017.06.16 at 08h 39m 18s.xml">
       <configuration name="AlgorithmsTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="AlgorithmsTest - 2017.06.16 at 00h 12m 12s.xml">
+    <history-entry file="AlgorithmsTest - 2017.06.16 at 08h 39m 34s.xml">
       <configuration name="AlgorithmsTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="AlgorithmsTest - 2017.06.16 at 00h 12m 34s.xml">
+    <history-entry file="AlgorithmsTest - 2017.06.16 at 08h 40m 23s.xml">
       <configuration name="AlgorithmsTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="AlgorithmsTest - 2017.06.16 at 00h 13m 19s.xml">
+    <history-entry file="AlgorithmsTest - 2017.06.16 at 08h 40m 50s.xml">
       <configuration name="AlgorithmsTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="AlgorithmsTest - 2017.06.16 at 00h 13m 29s.xml">
+    <history-entry file="AlgorithmsTest - 2017.06.16 at 08h 40m 55s.xml">
       <configuration name="AlgorithmsTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="AlgorithmsTest - 2017.06.16 at 00h 14m 05s.xml">
+    <history-entry file="AlgorithmsTest - 2017.06.16 at 08h 41m 04s.xml">
       <configuration name="AlgorithmsTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="AlgorithmsTest - 2017.06.16 at 00h 14m 45s.xml">
+    <history-entry file="AlgorithmsTest - 2017.06.16 at 08h 41m 10s.xml">
       <configuration name="AlgorithmsTest" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="5888000" />
+    <option name="totallyTimeSpent" value="9821000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-11" y="-11" width="1942" height="1046" extended-state="6" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3289941" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Material Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24972972" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3289941" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3289941" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.35857987" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32972974" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.40828404" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Material Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32900944" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21405405" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.46378377" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24972972" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32972974" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
@@ -825,22 +883,34 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/task_1/FindHCF.java">
+    <entry file="file://$PROJECT_DIR$/src/algorithms/Numbers.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="280">
-          <caret line="9" column="4" lean-forward="false" selection-start-line="9" selection-start-column="4" selection-end-line="9" selection-end-column="4" />
+        <state relative-caret-position="1435">
+          <caret line="43" column="29" lean-forward="false" selection-start-line="43" selection-start-column="29" selection-end-line="43" selection-end-column="29" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/task_8/ArrayProcess.java">
+    <entry file="file://$PROJECT_DIR$/src/algorithms/ArraySearch.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="6" column="0" lean-forward="false" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
+        <state relative-caret-position="2800">
+          <caret line="80" column="9" lean-forward="true" selection-start-line="80" selection-start-column="9" selection-end-line="80" selection-end-column="9" />
           <folding />
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/AlgorithmsTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2660">
+          <caret line="76" column="0" lean-forward="false" selection-start-line="76" selection-start-column="0" selection-end-line="76" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/task_1/FindHCF.java" />
+    <entry file="file://$PROJECT_DIR$/src/task_8/ArrayProcess.java" />
     <entry file="file://$PROJECT_DIR$/src/stuctures/SLNode.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-2654">
@@ -888,7 +958,7 @@
           </nodes>
           <notes />
           <edges />
-          <settings layout="Hierarchic Group" zoom="1.0" x="96.5" y="23.5" />
+          <settings layout="Hierarchic Group" zoom="1.0" x="97.0" y="24.0" />
           <SelectedNodes />
           <Categories />
           <SCOPE>All</SCOPE>
@@ -898,11 +968,9 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/algorithms/Numbers.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-519">
+        <state relative-caret-position="1435">
           <caret line="43" column="29" lean-forward="false" selection-start-line="43" selection-start-column="29" selection-end-line="43" selection-end-column="29" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -919,42 +987,75 @@
         <state relative-caret-position="105">
           <caret line="3" column="0" lean-forward="true" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/algorithms/ArrayOperations.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="280">
-          <caret line="107" column="22" lean-forward="false" selection-start-line="107" selection-start-column="22" selection-end-line="107" selection-end-column="22" />
+        <state relative-caret-position="152">
+          <caret line="145" column="40" lean-forward="false" selection-start-line="145" selection-start-column="40" selection-end-line="145" selection-end-column="40" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/algorithms/ArraySort.java">
+    <entry file="file://$PROJECT_DIR$/src/algorithms/ArraySearch.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="157">
-          <caret line="225" column="0" lean-forward="false" selection-start-line="225" selection-start-column="0" selection-end-line="226" selection-end-column="0" />
+        <state relative-caret-position="388">
+          <caret line="80" column="9" lean-forward="false" selection-start-line="80" selection-start-column="9" selection-end-line="80" selection-end-column="9" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/AlgorithmsTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="531">
-          <caret line="76" column="0" lean-forward="false" selection-start-line="76" selection-start-column="0" selection-end-line="76" selection-end-column="0" />
+        <state relative-caret-position="636">
+          <caret line="85" column="29" lean-forward="false" selection-start-line="85" selection-start-column="29" selection-end-line="85" selection-end-column="29" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/algorithms/ArraySearch.java">
+    <entry file="file://$PROJECT_DIR$/src/algorithms/ArraySort.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1610">
-          <caret line="80" column="9" lean-forward="true" selection-start-line="80" selection-start-column="9" selection-end-line="80" selection-end-column="9" />
-          <folding />
+        <state relative-caret-position="251">
+          <caret line="401" column="35" lean-forward="false" selection-start-line="401" selection-start-column="35" selection-end-line="401" selection-end-column="35" />
+          <folding>
+            <element signature="docComment;class#ArraySort#0" expanded="false" />
+            <element signature="docComment;method#doubleBubleSort#0;class#ArraySort#0" expanded="false" />
+            <element signature="method#doubleBubleSort#0;class#ArraySort#0" expanded="false" />
+            <element signature="docComment;method#bubleSort#0;class#ArraySort#0" expanded="false" />
+            <element signature="method#bubleSort#0;class#ArraySort#0" expanded="false" />
+            <element signature="docComment;method#insertionSortSedj#0;class#ArraySort#0" expanded="false" />
+            <element signature="method#insertionSortSedj#0;class#ArraySort#0" expanded="false" />
+            <element signature="docComment;method#insertionSortMTI#0;class#ArraySort#0" expanded="false" />
+            <element signature="method#insertionSortMTI#0;class#ArraySort#0" expanded="false" />
+            <element signature="docComment;method#getMinInd#0;class#ArraySort#0" expanded="false" />
+            <element signature="method#getMinInd#0;class#ArraySort#0" expanded="false" />
+            <element signature="docComment;method#getMaxInd#0;class#ArraySort#0" expanded="false" />
+            <element signature="method#getMaxInd#0;class#ArraySort#0" expanded="false" />
+            <element signature="docComment;method#selectionSort#0;class#ArraySort#0" expanded="false" />
+            <element signature="method#selectionSort#0;class#ArraySort#0" expanded="false" />
+            <element signature="docComment;method#shellSortKnut#0;class#ArraySort#0" expanded="false" />
+            <element signature="method#shellSortKnut#0;class#ArraySort#0" expanded="false" />
+            <element signature="docComment;method#shellSortSej#0;class#ArraySort#0" expanded="false" />
+            <element signature="method#shellSortSej#0;class#ArraySort#0" expanded="false" />
+            <element signature="docComment;method#countingSort#0;class#ArraySort#0" expanded="false" />
+            <element signature="method#countingSort#0;class#ArraySort#0" expanded="false" />
+            <element signature="docComment;method#countingSortStable#0;class#ArraySort#0" expanded="false" />
+            <element signature="method#countingSortStable#0;class#ArraySort#0" expanded="false" />
+            <element signature="docComment;method#bitRadixSort#0;class#ArraySort#0" expanded="false" />
+            <element signature="method#bitRadixSort#0;class#ArraySort#0" expanded="false" />
+            <element signature="method#radixSort#0;class#ArraySort#0" expanded="false" />
+            <element signature="docComment;method#strRadixSort#0;class#ArraySort#0" expanded="false" />
+            <element signature="method#strRadixSort#0;class#ArraySort#0" expanded="false" />
+            <element signature="docComment;method#bucketSort#0;class#ArraySort#0" expanded="false" />
+            <element signature="method#bucketSort#0;class#ArraySort#0" expanded="false" />
+            <element signature="docComment;method#mergesort2#0;class#ArraySort#0" expanded="false" />
+            <element signature="method#mergesort2#1;class#ArraySort#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>

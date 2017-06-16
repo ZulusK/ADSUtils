@@ -350,5 +350,60 @@ public class ArraySort {
         return arr;
     }
 
+    /**
+     * Сортировка слиянием, двоколейное слияние, top-down
+     *
+     * @param arr
+     */
+    public static void mergesort2(int[] arr) {
+        mergesort2(arr, 0, arr.length-1);
+    }
 
+    private static void mergesort2(int[] arr, int L, int R) {
+        if (L < R) {
+            int M = (R + L) / 2;
+            mergesort2(arr, L, M);
+            mergesort2(arr, M+1, R);
+            merge(arr, L, M, R);
+        }
+    }
+
+    private static void merge(int[] dst, int L, int M, int R) {
+        int[] left = new int[M - L+1];
+        int[] right = new int[R - M];
+        System.arraycopy(dst, L, left, 0, left.length);
+        System.arraycopy(dst, M+1, right, 0, right.length);
+        for (int k = L, i = 0, j = 0; k <= R; k++) {
+            if (i == left.length) {
+                //check, is left array is empty
+                dst[k] = right[j++];
+            } else if (j == right.length) {
+                //check, is right array is empty
+                dst[k] = left[i++];
+            } else if (left[i] <= right[j]) {
+                //copy element from left subarray
+                dst[k] = left[i++];
+            } else {
+                //copy element from right subarray
+                dst[k] = right[j++];
+            }
+        }
+    }
+
+    /**
+     * merger sort Bottom-Up
+     * @param arr
+     */
+    public static void mergesortBD(int arr[]){
+        int chunk=1;
+        while(chunk<arr.length){
+            int pos=0;
+            while(pos<=arr.length-chunk){
+                int mid=pos+chunk-1;
+                merge(arr,pos,mid,Integer.min(mid+chunk,arr.length-1));
+                pos+=chunk*2;
+            }
+            chunk*=2;
+        }
+    }
 }
