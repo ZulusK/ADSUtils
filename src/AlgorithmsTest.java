@@ -3,6 +3,7 @@ import algorithms.ArraySort;
 import org.junit.Test;
 import structures.deque.ArrayDeque;
 import structures.deque.LinkedDeque;
+import structures.dictionary.BSTree;
 import structures.hashtable.OAHastable;
 import structures.hashtable.SChHastable;
 import structures.list.ArrayList;
@@ -981,5 +982,102 @@ public class AlgorithmsTest {
         assertTrue(table.remove(1));
         assertFalse(table.remove(-1));
         assertEquals(table.size(), 1);
+    }
+
+    @Test
+    public void testBStree_add_uniq() {
+        BSTree<Integer, String> tree = new BSTree<>();
+        assertTrue(tree.isEmpty());
+        int values[] = {5, 4, -10, 1, 3, 14, 15, 7, 2};
+        for (int i = 0; i < values.length; i++) {
+            assertEquals(tree.put(i, values[i] + ""), null);
+        }
+        assertEquals(tree.size(), values.length);
+    }
+
+    @Test
+    public void testBStree_add_not_uniq() {
+        BSTree<Integer, String> tree = new BSTree<>();
+        assertTrue(tree.isEmpty());
+        int values[] = {5, 4, -10, 1, 3, 14, 15, 7, 2};
+        for (int i = 0; i < values.length; i++) {
+            tree.put(i, values[i] + "");
+        }
+        for (int i = 0; i < values.length; i++) {
+            assertEquals(tree.put(i, i + ""), values[i] + "");
+            assertEquals(tree.put(i, ""), i + "");
+        }
+        assertEquals(tree.size(), values.length);
+    }
+
+    @Test
+    public void testBStree_contains() {
+        BSTree<Integer, String> tree = new BSTree<>();
+        assertTrue(tree.isEmpty());
+        int values[] = {5, 4, -10, 1, 3, 14, 15, 7, 2};
+        for (int i = 0; i < values.length; i++) {
+            tree.put(i, values[i] + "");
+        }
+        for (int i = 0; i < values.length; i++) {
+            assertTrue(tree.contains(i));
+        }
+        assertFalse(tree.contains(-1));
+        assertFalse(tree.contains(100));
+    }
+
+    @Test
+    public void testBStree_get() {
+        BSTree<Integer, String> tree = new BSTree<>();
+        assertTrue(tree.isEmpty());
+        int values[] = {5, 4, -10, 1, 3, 14, 15, 7, 2};
+        for (int i = 0; i < values.length; i++) {
+            tree.put(i, values[i] + "");
+        }
+        for (int i = 0; i < values.length; i++) {
+            assertEquals(tree.get(i), values[i] + "");
+        }
+        assertEquals(tree.get(-1), null);
+        assertEquals(tree.get(100), null);
+        assertEquals(tree.size(), values.length);
+    }
+
+    @Test
+    public void testBStree_remove() {
+        BSTree<Integer, String> tree = new BSTree<>();
+        assertTrue(tree.isEmpty());
+        int values[] = {5, 4, -10, 1, 3, 14, 15, 7, 2};
+        for (int i = 0; i < values.length; i++) {
+            tree.put(i, values[i] + "");
+        }
+        for (int i = 0; i < values.length; i++) {
+            assertEquals(tree.remove(i), values[i] + "");
+        }
+        assertTrue(tree.isEmpty());
+        for (int i = 0; i < values.length; i++) {
+            assertEquals(tree.get(i), null);
+        }
+        assertEquals(tree.get(-1), null);
+        assertEquals(tree.size(), 0);
+    }
+
+    @Test
+    public void testBStree_remove_add() {
+        BSTree<Integer, String> tree = new BSTree<>();
+        assertTrue(tree.isEmpty());
+        int values[] = {5, 4, -10, 1, 3, 14, 15, 7, 2};
+        for (int i = 0; i < values.length; i++) {
+            tree.put(i, values[i] + "");
+        }
+        for (int i = 0; i < values.length; i++) {
+            tree.remove(i);
+        }
+        assertEquals(tree.size(), 0);
+        for (int i = 0; i < values.length; i++) {
+            assertEquals(tree.put(i, values[i] + ""), null);
+        }
+        assertEquals(tree.size(), values.length);
+        for (int i = 0; i < values.length; i++) {
+            assertEquals(tree.get(i), values[i] + "");
+        }
     }
 }
