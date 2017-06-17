@@ -1,7 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="8dc8066b-1f35-45d0-98be-e473d5554ce1" name="Default" comment="">
+    <list default="true" id="8dc8066b-1f35-45d0-98be-e473d5554ce1" name="Default" comment="Hashtable">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/AlgorithmsTest.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/algorithms/ArraySearch.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/algorithms/Numbers.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/structures/deque/ArrayDeque.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/structures/deque/Deque.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/structures/deque/LinkedDeque.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/structures/hashtable/OAHastable.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/structures/hashtable/SChHastable.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/structures/hashtable/Set.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/structures/list/ArrayList.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/structures/list/DoublyLinkedList.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/structures/list/List.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/structures/list/SinglyLinkedList.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/structures/queue/ArrayQueue.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/structures/queue/LinkedQueue.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/structures/queue/Queue.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/structures/stack/ArrayStack.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/structures/stack/LinkedStack.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/structures/stack/Stack.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -138,7 +157,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SChHastable.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="SChHastable.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/structures/hashtable/SChHastable.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="149">
@@ -152,6 +171,24 @@
                 <element signature="e#1725#1726#0" expanded="true" />
                 <element signature="e#4450#4451#0" expanded="true" />
                 <element signature="e#4482#4483#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DoublyLinkedList.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/structures/list/DoublyLinkedList.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-105">
+              <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+              <folding>
+                <element signature="method#DoublyLinkedList#0;class#DoublyLinkedList#0" expanded="false" />
+                <element signature="method#getNode#0;class#DoublyLinkedList#0" expanded="false" />
+                <element signature="method#add#1;class#DoublyLinkedList#0" expanded="false" />
+                <element signature="method#removeAfter#0;class#DoublyLinkedList#0" expanded="false" />
+                <element signature="method#remove#1;class#DoublyLinkedList#0" expanded="false" />
+                <element signature="method#get#0;class#DoublyLinkedList#0" expanded="false" />
+                <element signature="method#set#0;class#DoublyLinkedList#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -238,7 +275,6 @@
         <option value="$PROJECT_DIR$/src/structures/DLNode.java" />
         <option value="$PROJECT_DIR$/src/structures/queue/Queue.java" />
         <option value="$PROJECT_DIR$/src/structures/list/SinglyLinkedList.java" />
-        <option value="$PROJECT_DIR$/src/structures/list/DoublyLinkedList.java" />
         <option value="$PROJECT_DIR$/src/structures/stack/Stack.java" />
         <option value="$PROJECT_DIR$/src/structures/queue/LinkedQueue.java" />
         <option value="$PROJECT_DIR$/src/structures/queue/ArrayQueue.java" />
@@ -255,6 +291,7 @@
         <option value="$PROJECT_DIR$/src/structures/hashtable/OAHastable.java" />
         <option value="$PROJECT_DIR$/src/AlgorithmsTest.java" />
         <option value="$PROJECT_DIR$/src/structures/hashtable/SChHastable.java" />
+        <option value="$PROJECT_DIR$/src/structures/list/DoublyLinkedList.java" />
       </list>
     </option>
   </component>
@@ -914,7 +951,7 @@
       <workItem from="1497585510709" duration="116000" />
       <workItem from="1497585689096" duration="27000" />
       <workItem from="1497593800888" duration="3667000" />
-      <workItem from="1497623830994" duration="40211000" />
+      <workItem from="1497623830994" duration="40323000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <created>1497584130612</created>
@@ -993,7 +1030,14 @@
       <option name="project" value="LOCAL" />
       <updated>1497668923316</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Deque">
+      <created>1497677134984</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1497677134984</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -1029,9 +1073,9 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="46188000" />
+    <option name="totallyTimeSpent" value="46300000" />
   </component>
-  <component name="TodoView">
+  <component name="TodoView" selected-index="4">
     <todo-panel id="selected-file">
       <is-autoscroll-to-source value="true" />
     </todo-panel>
@@ -1042,6 +1086,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1920" height="1080" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -1061,11 +1106,11 @@
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32817337" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.40763673" sideWeight="0.49351352" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32817337" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.40763673" sideWeight="0.49351352" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32918918" sideWeight="0.5" order="10" side_tool="true" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32900944" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19243243" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19243243" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32920536" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="true" content_ui="tabs" />
@@ -1136,7 +1181,8 @@
     <MESSAGE value="queue" />
     <MESSAGE value="stack" />
     <MESSAGE value="Deque" />
-    <option name="LAST_COMMIT_MESSAGE" value="Deque" />
+    <MESSAGE value="Hashtable" />
+    <option name="LAST_COMMIT_MESSAGE" value="Hashtable" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1528,23 +1574,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/structures/list/DoublyLinkedList.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="735">
-          <caret line="86" column="20" lean-forward="true" selection-start-line="80" selection-start-column="6" selection-end-line="86" selection-end-column="20" />
-          <folding>
-            <element signature="docComment;class#DoublyLinkedList#0" expanded="false" />
-            <element signature="method#DoublyLinkedList#0;class#DoublyLinkedList#0" expanded="false" />
-            <element signature="method#getNode#0;class#DoublyLinkedList#0" expanded="false" />
-            <element signature="method#add#1;class#DoublyLinkedList#0" expanded="false" />
-            <element signature="method#removeAfter#0;class#DoublyLinkedList#0" expanded="false" />
-            <element signature="method#remove#1;class#DoublyLinkedList#0" expanded="false" />
-            <element signature="method#get#0;class#DoublyLinkedList#0" expanded="false" />
-            <element signature="method#set#0;class#DoublyLinkedList#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/structures/DLNode.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="515">
@@ -1751,6 +1780,22 @@
             <element signature="e#1725#1726#0" expanded="true" />
             <element signature="e#4450#4451#0" expanded="true" />
             <element signature="e#4482#4483#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/structures/list/DoublyLinkedList.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-105">
+          <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+          <folding>
+            <element signature="method#DoublyLinkedList#0;class#DoublyLinkedList#0" expanded="false" />
+            <element signature="method#getNode#0;class#DoublyLinkedList#0" expanded="false" />
+            <element signature="method#add#1;class#DoublyLinkedList#0" expanded="false" />
+            <element signature="method#removeAfter#0;class#DoublyLinkedList#0" expanded="false" />
+            <element signature="method#remove#1;class#DoublyLinkedList#0" expanded="false" />
+            <element signature="method#get#0;class#DoublyLinkedList#0" expanded="false" />
+            <element signature="method#set#0;class#DoublyLinkedList#0" expanded="false" />
           </folding>
         </state>
       </provider>
