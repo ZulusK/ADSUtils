@@ -6,30 +6,6 @@ public class DLNode<T> {
     DLNode next; // pointer to the next node
     DLNode prev; // pointer to the previous nod
 
-    public T getData() {
-        return data;
-    }
-
-    public void setData(T data) {
-        this.data = data;
-    }
-
-    public DLNode<T> getNext() {
-        return next;
-    }
-
-    public void setNext(DLNode<T> next) {
-        this.next = next;
-    }
-
-    public DLNode<T> getPrev() {
-        return prev;
-    }
-
-    public void setPrev(DLNode<T> prev) {
-        this.prev = prev;
-    }
-
     /**
      * Construct the node of doubly-linked list with null pointers to the next
      * and previous nodes
@@ -52,6 +28,30 @@ public class DLNode<T> {
     public DLNode(T data, DLNode next, DLNode prev) {
         this.data = data;
         this.next = next;
+        this.prev = prev;
+    }
+
+    public T getData() {
+        return data;
+    }
+
+    public void setData(T data) {
+        this.data = data;
+    }
+
+    public DLNode<T> getNext() {
+        return next;
+    }
+
+    public void setNext(DLNode<T> next) {
+        this.next = next;
+    }
+
+    public DLNode<T> getPrev() {
+        return prev;
+    }
+
+    public void setPrev(DLNode<T> prev) {
         this.prev = prev;
     }
 

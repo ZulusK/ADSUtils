@@ -1,7 +1,5 @@
 package algorithms;
 
-import structures.DLNode;
-
 import static algorithms.ArrayOperations.swap;
 
 /**
@@ -509,27 +507,27 @@ public class ArraySort {
         quicksortM(arr, 0, arr.length - 1);
     }
 
-    private static int medianOf3(int arr[], int L, int R){
-        int center=(L+R)/2;
-        if(arr[L]<arr[center]){
-            swap(arr,L,center);
+    private static int medianOf3(int arr[], int L, int R) {
+        int center = (L + R) / 2;
+        if (arr[L] < arr[center]) {
+            swap(arr, L, center);
         }
-        if(arr[L]<arr[R]){
-            swap(arr,L,R);
+        if (arr[L] < arr[R]) {
+            swap(arr, L, R);
         }
-        if(arr[center]<arr[R]){
-            swap(arr,center,R);
+        if (arr[center] < arr[R]) {
+            swap(arr, center, R);
         }
-        swap(arr,center,R);
+        swap(arr, center, R);
         return arr[R];
     }
 
     private static void quicksortM(int arr[], int L, int R) {
         if (L < R) {
-            medianOf3(arr,L,R);
+            medianOf3(arr, L, R);
             int q = partition_L(arr, L, R);
-            quicksortM(arr, L, q-1);
-            quicksortM(arr, q+1, R);
+            quicksortM(arr, L, q - 1);
+            quicksortM(arr, q + 1, R);
         }
     }
- }
+}

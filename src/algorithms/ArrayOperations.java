@@ -101,17 +101,18 @@ public class ArrayOperations {
         }
     }
 
-    public static  String[] getStrArray(int size,  int minLength,int maxLength){
-        String[] arr=new String[size];
-        for(int j=0; j<size;j++){
-            int bound=(int)(Math.random()*(maxLength-minLength)+minLength);
-            arr[j]="";
-            for(int i=0; i<bound;i++){
-                arr[j]+=(char)('A'+Math.random()*27);
+    public static String[] getStrArray(int size, int minLength, int maxLength) {
+        String[] arr = new String[size];
+        for (int j = 0; j < size; j++) {
+            int bound = (int) (Math.random() * (maxLength - minLength) + minLength);
+            arr[j] = "";
+            for (int i = 0; i < bound; i++) {
+                arr[j] += (char) ('A' + Math.random() * 27);
             }
         }
         return arr;
     }
+
     /**
      * получить массив заполненый числами по возрастанию, начиная со start
      *
@@ -180,6 +181,7 @@ public class ArrayOperations {
         }
         return true;
     }
+
     private static boolean isSorted_incr(int[] arr) {
         for (int i = 1; i < arr.length; i++) {
             if (arr[i - 1] > arr[i]) {
@@ -188,6 +190,7 @@ public class ArrayOperations {
         }
         return true;
     }
+
     public static boolean isSorted(int[] arr, boolean byIncrease) {
         if (byIncrease) {
             return isSorted_incr(arr);

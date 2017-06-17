@@ -1,7 +1,5 @@
 package algorithms;
 
-import structures.DLNode;
-
 /**
  * Created by Zulus on 15.01.2017.
  */
