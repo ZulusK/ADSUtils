@@ -192,7 +192,7 @@ public class BSTree<K extends Comparable, V> implements Dictionary<K, V> {
         stack.push(node);
         while (!stack.isEmpty()) {
             node = stack.pop();
-            System.out.print("{"+node + "}, ");
+            System.out.print("{" + node + "}, ");
             stack.push(node.left);
             stack.push(node.right);
         }
@@ -298,7 +298,7 @@ public class BSTree<K extends Comparable, V> implements Dictionary<K, V> {
 
         @Override
         public String toString() {
-            return "[" + key + "] : " + value ;
+            return "[" + key + "] : " + value;
         }
 
     }

@@ -34,7 +34,7 @@ public class ArrayList<T> implements List<T> {
         if (element == null) {
             return false;
         }
-        if (size == capacity) {
+        if (size >= capacity) {
             resize();
         }
         this.list[size++] = element;
@@ -54,7 +54,7 @@ public class ArrayList<T> implements List<T> {
      * @param index
      */
     private void shiftRight(int index) {
-        for (int i = index + 1; i <= size; i++) {
+        for (int i = size; i >index; i--) {
             list[i] = list[i - 1];
         }
     }
@@ -68,6 +68,7 @@ public class ArrayList<T> implements List<T> {
         for (int i = index; i < size - 1; i++) {
             list[i] = list[i + 1];
         }
+        list[size-1]=null;
     }
 
     @Override
@@ -75,7 +76,7 @@ public class ArrayList<T> implements List<T> {
         if (index < 0 || index > size || e == null) {
             return false;
         }
-        if (size == capacity) {
+        if (size >= capacity) {
             resize();
         }
         shiftRight(index);

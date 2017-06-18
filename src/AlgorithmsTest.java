@@ -6,6 +6,7 @@ import structures.deque.LinkedDeque;
 import structures.dictionary.BSTree;
 import structures.hashtable.OAHastable;
 import structures.hashtable.SChHastable;
+import structures.heap.max_priority_queue.*;
 import structures.list.ArrayList;
 import structures.list.DoublyLinkedList;
 import structures.list.SinglyLinkedList;
@@ -1079,5 +1080,280 @@ public class AlgorithmsTest {
         for (int i = 0; i < values.length; i++) {
             assertEquals(tree.get(i), values[i] + "");
         }
+    }
+
+    @Test
+    public void testSPArrayQueue_add() {
+        SortedArrayPriorityQueue<Integer> queue = new SortedArrayPriorityQueue<>();
+        int[] values = {1, 4, -2, 5, 0, 12, 13, -2, 5, 1, 2, -2};
+        assertTrue(queue.isEmpty());
+        for (int i = 0; i < values.length; i++) {
+            queue.insert(values[i]);
+        }
+        assertFalse(queue.isEmpty());
+        assertEquals(queue.size(), values.length);
+    }
+
+    @Test
+    public void testSPArrayQueue_remove() {
+        SortedArrayPriorityQueue<Integer> queue = new SortedArrayPriorityQueue<>();
+        int[] values = {1, 4, -2, 5, 0, 12, 13, -2, 5, 1, 2, -2};
+        for (int i = 0; i < values.length; i++) {
+            queue.insert(values[i]);
+        }
+        ArraySort.quicksortL(values);
+        values = ArrayOperations.reverse(values);
+        for (int i = 0; i < values.length; i++) {
+            assertEquals(queue.removeMax().intValue(), values[i]);
+        }
+        assertTrue(queue.isEmpty());
+        assertEquals(queue.removeMax(), null);
+    }
+
+    @Test
+    public void testSPArrayQueue_get() {
+        SortedArrayPriorityQueue<Integer> queue = new SortedArrayPriorityQueue<>();
+        int[] values = {1, 4, -2, 5, 0, 12, 13, -2, 5, 1, 2, -2};
+        for (int i = 0; i < values.length; i++) {
+            queue.insert(values[i]);
+        }
+        ArraySort.quicksortL(values);
+        values = ArrayOperations.reverse(values);
+        for (int i = 0; i < values.length; i++) {
+            assertEquals(queue.max().intValue(), values[i]);
+            queue.removeMax();
+        }
+    }
+
+    @Test
+    public void testSPArrayQueue_remove_add() {
+        SortedArrayPriorityQueue<Integer> queue = new SortedArrayPriorityQueue<>();
+        queue.insert(1);
+        queue.insert(-2);
+        queue.insert(5);
+        queue.removeMax();
+        queue.insert(6);
+        assertEquals(queue.size(), 3);
+        assertEquals(queue.max().intValue(), 6);
+    }
+
+    @Test
+    public void testSPListQueue_add() {
+        SortedListPriorityQueue<Integer> queue = new SortedListPriorityQueue<>();
+        int[] values = {1, 4, -2, 5, 0, 12, 13, -2, 5, 1, 2, -2};
+        assertTrue(queue.isEmpty());
+        for (int i = 0; i < values.length; i++) {
+            queue.insert(values[i]);
+        }
+        assertFalse(queue.isEmpty());
+        assertEquals(queue.size(), values.length);
+    }
+
+    @Test
+    public void testSPListQueue_remove() {
+        SortedListPriorityQueue<Integer> queue = new SortedListPriorityQueue<>();
+        int[] values = {1, 4, -2, 5, 0, 12, 13, -2, 5, 1, 2, -2};
+        for (int i = 0; i < values.length; i++) {
+            queue.insert(values[i]);
+        }
+        ArraySort.quicksortL(values);
+        values = ArrayOperations.reverse(values);
+        for (int i = 0; i < values.length; i++) {
+            assertEquals(queue.removeMax().intValue(), values[i]);
+        }
+        assertTrue(queue.isEmpty());
+        assertEquals(queue.removeMax(), null);
+    }
+
+    @Test
+    public void testSPListQueue_get() {
+        SortedListPriorityQueue<Integer> queue = new SortedListPriorityQueue<>();
+        int[] values = {1, 4, -2, 5, 0, 12, 13, -2, 5, 1, 2, -2};
+        for (int i = 0; i < values.length; i++) {
+            queue.insert(values[i]);
+        }
+        ArraySort.quicksortL(values);
+        values = ArrayOperations.reverse(values);
+        for (int i = 0; i < values.length; i++) {
+            assertEquals(queue.max().intValue(), values[i]);
+            queue.removeMax();
+        }
+    }
+
+    @Test
+    public void testSPListQueue_remove_add() {
+        SortedListPriorityQueue<Integer> queue = new SortedListPriorityQueue<>();
+        queue.insert(1);
+        queue.insert(-2);
+        queue.insert(5);
+        queue.removeMax();
+        queue.insert(6);
+        assertEquals(queue.size(), 3);
+        assertEquals(queue.max().intValue(), 6);
+    }
+
+    @Test
+    public void testUSPArrayQueue_add() {
+        UnsortedArrayPriorityQueue<Integer> queue = new UnsortedArrayPriorityQueue<>();
+        int[] values = {1, 4, -2, 5, 0, 12, 13, -2, 5, 1, 2, -2};
+        assertTrue(queue.isEmpty());
+        for (int i = 0; i < values.length; i++) {
+            queue.insert(values[i]);
+        }
+        assertFalse(queue.isEmpty());
+        assertEquals(queue.size(), values.length);
+    }
+
+    @Test
+    public void testUSPArrayQueue_remove() {
+        UnsortedArrayPriorityQueue<Integer> queue = new UnsortedArrayPriorityQueue<>();
+        int[] values = {1, 4, -2, 5, 0, 12, 13, -2, 5, 1, 2, -2};
+        for (int i = 0; i < values.length; i++) {
+            queue.insert(values[i]);
+        }
+        ArraySort.quicksortL(values);
+        values = ArrayOperations.reverse(values);
+        for (int i = 0; i < values.length; i++) {
+            assertEquals(queue.removeMax().intValue(), values[i]);
+        }
+        assertTrue(queue.isEmpty());
+        assertEquals(queue.removeMax(), null);
+    }
+
+    @Test
+    public void testUSPArrayQueue_get() {
+        UnsortedArrayPriorityQueue<Integer> queue = new UnsortedArrayPriorityQueue<>();
+        int[] values = {1, 4, -2, 5, 0, 12, 13, -2, 5, 1, 2, -2};
+        for (int i = 0; i < values.length; i++) {
+            queue.insert(values[i]);
+        }
+        ArraySort.quicksortL(values);
+        values = ArrayOperations.reverse(values);
+        for (int i = 0; i < values.length; i++) {
+            assertEquals(queue.max().intValue(), values[i]);
+            queue.removeMax();
+        }
+    }
+
+    @Test
+    public void testUSPArrayQueue_remove_add() {
+        UnsortedArrayPriorityQueue<Integer> queue = new UnsortedArrayPriorityQueue<>();
+        queue.insert(1);
+        queue.insert(-2);
+        queue.insert(5);
+        queue.removeMax();
+        queue.insert(6);
+        assertEquals(queue.size(), 3);
+        assertEquals(queue.max().intValue(), 6);
+    }
+
+    @Test
+    public void testUSPListQueue_add() {
+        UnsortedListPriorityQueue<Integer> queue = new UnsortedListPriorityQueue<>();
+        int[] values = {1, 4, -2, 5, 0, 12, 13, -2, 5, 1, 2, -2};
+        assertTrue(queue.isEmpty());
+        for (int i = 0; i < values.length; i++) {
+            queue.insert(values[i]);
+        }
+        assertFalse(queue.isEmpty());
+        assertEquals(queue.size(), values.length);
+    }
+
+    @Test
+    public void testUSPListQueue_remove() {
+        UnsortedListPriorityQueue<Integer> queue = new UnsortedListPriorityQueue<>();
+        int[] values = {1, 4, -2, 5, 0, 12, 13, -2, 5, 1, 2, -2};
+        for (int i = 0; i < values.length; i++) {
+            queue.insert(values[i]);
+        }
+        ArraySort.quicksortL(values);
+        values = ArrayOperations.reverse(values);
+        for (int i = 0; i < values.length; i++) {
+            assertEquals(queue.removeMax().intValue(), values[i]);
+        }
+        assertTrue(queue.isEmpty());
+        assertEquals(queue.removeMax(), null);
+    }
+
+    @Test
+    public void testUSPListQueue_get() {
+        UnsortedListPriorityQueue<Integer> queue = new UnsortedListPriorityQueue<>();
+        int[] values = {1, 4, -2, 5, 0, 12, 13, -2, 5, 1, 2, -2};
+        for (int i = 0; i < values.length; i++) {
+            queue.insert(values[i]);
+        }
+        ArraySort.quicksortL(values);
+        values = ArrayOperations.reverse(values);
+        for (int i = 0; i < values.length; i++) {
+            assertEquals(queue.max().intValue(), values[i]);
+            queue.removeMax();
+        }
+    }
+
+    @Test
+    public void testUSPListQueue_remove_add() {
+        UnsortedListPriorityQueue<Integer> queue = new UnsortedListPriorityQueue<>();
+        queue.insert(1);
+        queue.insert(-2);
+        queue.insert(5);
+        queue.removeMax();
+        queue.insert(6);
+        assertEquals(queue.size(), 3);
+        assertEquals(queue.max().intValue(), 6);
+    }
+
+    @Test
+    public void testHeapQueue_add() {
+        HeapPriorityQueue<Integer> queue = new HeapPriorityQueue<>();
+        int[] values = {1, 4, -2, 5, 0, 12, 13, -2, 5, 1, 2, -2};
+        assertTrue(queue.isEmpty());
+        for (int i = 0; i < values.length; i++) {
+            queue.insert(values[i]);
+        }
+        assertFalse(queue.isEmpty());
+        assertEquals(queue.size(), values.length);
+    }
+
+    @Test
+    public void testHeapQueue_remove() {
+        HeapPriorityQueue<Integer> queue = new HeapPriorityQueue<>();
+        int[] values = {1, 4, -2, 5, 0, 12, 13, -2, 5, 1, 2, -2};
+        for (int i = 0; i < values.length; i++) {
+            queue.insert(values[i]);
+        }
+        ArraySort.quicksortL(values);
+        values = ArrayOperations.reverse(values);
+        for (int i = 0; i < values.length; i++) {
+            assertEquals(queue.removeMax().intValue(), values[i]);
+        }
+        assertTrue(queue.isEmpty());
+        assertEquals(queue.removeMax(), null);
+    }
+
+    @Test
+    public void testHeapQueue_get() {
+        HeapPriorityQueue<Integer> queue = new HeapPriorityQueue<>();
+        int[] values = {1, 4, -2, 5, 0, 12, 13, -2, 5, 1, 2, -2};
+        for (int i = 0; i < values.length; i++) {
+            queue.insert(values[i]);
+        }
+        ArraySort.quicksortL(values);
+        values = ArrayOperations.reverse(values);
+        for (int i = 0; i < values.length; i++) {
+            assertEquals(queue.max().intValue(), values[i]);
+            queue.removeMax();
+        }
+    }
+
+    @Test
+    public void testHeapQueue_remove_add() {
+        HeapPriorityQueue<Integer> queue = new HeapPriorityQueue<>();
+        queue.insert(1);
+        queue.insert(-2);
+        queue.insert(5);
+        queue.removeMax();
+        queue.insert(6);
+        assertEquals(queue.size(), 3);
+        assertEquals(queue.max().intValue(), 6);
     }
 }

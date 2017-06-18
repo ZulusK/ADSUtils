@@ -21,8 +21,8 @@ public class DoublyLinkedList<T> implements List<T> {
     }
 
     private DLNode<T> getNode(int index) {
-        DLNode<T> curr = first.getNext();
-        for (int i = 0; i < index; i++) {
+        DLNode<T> curr = first;
+        for (int i = 0; i <= index; i++) {
             curr = curr.getNext();
         }
         return curr;
