@@ -198,4 +198,48 @@ public class ArrayOperations {
             return isSorted_decr(arr);
         }
     }
+
+    protected static int getLeftChild(int ind) {
+        return ind * 2 + 1;
+    }
+
+    protected static int getRightChild(int ind) {
+        return getLeftChild(ind) + 1;
+    }
+
+    protected static void sink(int arr[], int ind) {
+        int left = getLeftChild(ind);
+        int right = getRightChild(ind);
+        int largest = ind;
+        if (left < arr.length && arr[left] > arr[largest]) {
+            largest = left;
+        }
+        if (right < arr.length && arr[right] > arr[largest]) {
+            largest = right;
+        }
+        if (largest != ind) {
+            ArrayOperations.swap(arr, largest, ind);
+            sink(arr, largest);
+        }
+    }
+    protected static void sink(int arr[], int ind, int size) {
+        int left = getLeftChild(ind);
+        int right = getRightChild(ind);
+        int largest = ind;
+        if (left < size && arr[left] > arr[largest]) {
+            largest = left;
+        }
+        if (right < size && arr[right] > arr[largest]) {
+            largest = right;
+        }
+        if (largest != ind) {
+            ArrayOperations.swap(arr, largest, ind);
+            sink(arr, largest,size);
+        }
+    }
+    public static void buildMaxHeap(int arr[]) {
+        for (int i = arr.length / 2; i >= 0; i--) {
+            sink(arr, i);
+        }
+    }
 }

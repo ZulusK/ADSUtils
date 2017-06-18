@@ -1356,4 +1356,11 @@ public class AlgorithmsTest {
         assertEquals(queue.size(), 3);
         assertEquals(queue.max().intValue(), 6);
     }
+
+    @Test
+    public void testHeapSort() {
+        int[] arr = ArrayOperations.getRandomizeArray(30, -30, 30);
+        ArraySort.heapsort(arr);
+        assertTrue(ArrayOperations.isSorted(arr, false) || ArrayOperations.isSorted(arr, true));
+    }
 }

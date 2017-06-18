@@ -530,4 +530,18 @@ public class ArraySort {
             quicksortM(arr, q + 1, R);
         }
     }
+
+    /**
+     * HEAPSORT
+     */
+    public static void heapsort(int arr[]) {
+        ArrayOperations.buildMaxHeap(arr);
+        int size = arr.length;
+        for (int i = arr.length - 1; i >= 0; i--) {
+            ArrayOperations.swap(arr, 0, i);
+            ArrayOperations.sink(arr, 0, --size);
+        }
+    }
+
+
 }
