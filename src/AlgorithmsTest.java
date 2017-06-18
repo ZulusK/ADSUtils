@@ -4,6 +4,8 @@ import org.junit.Test;
 import structures.deque.ArrayDeque;
 import structures.deque.LinkedDeque;
 import structures.dictionary.BSTree;
+import structures.dictionary.Dictionary;
+import structures.dictionary.RandomBSTree;
 import structures.hashtable.OAHastable;
 import structures.hashtable.SChHastable;
 import structures.heap.max_priority_queue.*;
@@ -1002,11 +1004,11 @@ public class AlgorithmsTest {
         assertTrue(tree.isEmpty());
         int values[] = {5, 4, -10, 1, 3, 14, 15, 7, 2};
         for (int i = 0; i < values.length; i++) {
-            tree.put(i, values[i] + "");
+            tree.put(values[i], values[i] + "");
         }
         for (int i = 0; i < values.length; i++) {
-            assertEquals(tree.put(i, i + ""), values[i] + "");
-            assertEquals(tree.put(i, ""), i + "");
+            assertEquals(tree.put(values[i], i + ""), values[i] + "");
+            assertEquals(tree.put(values[i], ""), i + "");
         }
         assertEquals(tree.size(), values.length);
     }
@@ -1017,10 +1019,10 @@ public class AlgorithmsTest {
         assertTrue(tree.isEmpty());
         int values[] = {5, 4, -10, 1, 3, 14, 15, 7, 2};
         for (int i = 0; i < values.length; i++) {
-            tree.put(i, values[i] + "");
+            tree.put(values[i], values[i] + "");
         }
         for (int i = 0; i < values.length; i++) {
-            assertTrue(tree.contains(i));
+            assertTrue(tree.contains(values[i]));
         }
         assertFalse(tree.contains(-1));
         assertFalse(tree.contains(100));
@@ -1032,10 +1034,10 @@ public class AlgorithmsTest {
         assertTrue(tree.isEmpty());
         int values[] = {5, 4, -10, 1, 3, 14, 15, 7, 2};
         for (int i = 0; i < values.length; i++) {
-            tree.put(i, values[i] + "");
+            tree.put(values[i], values[i] + "");
         }
         for (int i = 0; i < values.length; i++) {
-            assertEquals(tree.get(i), values[i] + "");
+            assertEquals(tree.get(values[i]), values[i] + "");
         }
         assertEquals(tree.get(-1), null);
         assertEquals(tree.get(100), null);
@@ -1048,14 +1050,14 @@ public class AlgorithmsTest {
         assertTrue(tree.isEmpty());
         int values[] = {5, 4, -10, 1, 3, 14, 15, 7, 2};
         for (int i = 0; i < values.length; i++) {
-            tree.put(i, values[i] + "");
+            tree.put(values[i], values[i] + "");
         }
         for (int i = 0; i < values.length; i++) {
-            assertEquals(tree.remove(i), values[i] + "");
+            assertEquals(tree.remove(values[i]), values[i] + "");
         }
         assertTrue(tree.isEmpty());
         for (int i = 0; i < values.length; i++) {
-            assertEquals(tree.get(i), null);
+            assertEquals(tree.get(values[i]), null);
         }
         assertEquals(tree.get(-1), null);
         assertEquals(tree.size(), 0);
@@ -1067,18 +1069,18 @@ public class AlgorithmsTest {
         assertTrue(tree.isEmpty());
         int values[] = {5, 4, -10, 1, 3, 14, 15, 7, 2};
         for (int i = 0; i < values.length; i++) {
-            tree.put(i, values[i] + "");
+            tree.put(values[i], values[i] + "");
         }
         for (int i = 0; i < values.length; i++) {
-            tree.remove(i);
+            tree.remove(values[i]);
         }
         assertEquals(tree.size(), 0);
         for (int i = 0; i < values.length; i++) {
-            assertEquals(tree.put(i, values[i] + ""), null);
+            assertEquals(tree.put(values[i], values[i] + ""), null);
         }
         assertEquals(tree.size(), values.length);
         for (int i = 0; i < values.length; i++) {
-            assertEquals(tree.get(i), values[i] + "");
+            assertEquals(tree.get(values[i]), values[i] + "");
         }
     }
 
@@ -1362,5 +1364,103 @@ public class AlgorithmsTest {
         int[] arr = ArrayOperations.getRandomizeArray(30, -30, 30);
         ArraySort.heapsort(arr);
         assertTrue(ArrayOperations.isSorted(arr, false) || ArrayOperations.isSorted(arr, true));
+    }
+
+    @Test
+    public void testRandomBStree_add_uniq() {
+        RandomBSTree<Integer, String> tree = new RandomBSTree<>();
+        assertTrue(tree.isEmpty());
+        int values[] = {5, 4, -10, 1, 3, 14, 15, 7, 2};
+        for (int i = 0; i < values.length; i++) {
+            assertEquals(tree.put(i, values[i] + ""), null);
+        }
+        assertEquals(tree.size(), values.length);
+    }
+
+    @Test
+    public void testRandomBStree_add_not_uniq() {
+        RandomBSTree<Integer, String> tree = new RandomBSTree<>();
+        assertTrue(tree.isEmpty());
+//        int values[] = {13, 25, -79, 39, 4, 38, 77, 31, 65,78};
+        int values[]={18,37,84,26,97,48};
+        for (int i = 0; i < values.length; i++) {
+            tree.put(values[i], values[i] + "");
+        }
+        for (int i = 0; i < values.length; i++) {
+            assertEquals(tree.put(values[i], i + ""), values[i] + "");
+            assertEquals(tree.put(values[i], ""), i + "");
+        }
+        assertEquals(tree.size(), values.length);
+    }
+
+    @Test
+    public void testRandomBStree_contains() {
+        RandomBSTree<Integer, String> tree = new RandomBSTree<>();
+        assertTrue(tree.isEmpty());
+        int values[] = {5, 4, -10, 1, 3, 14, 15, 7, 2};
+        for (int i = 0; i < values.length; i++) {
+            tree.put(i, values[i] + "");
+        }
+        for (int i = 0; i < values.length; i++) {
+            assertTrue(tree.contains(i));
+        }
+        assertFalse(tree.contains(-1));
+        assertFalse(tree.contains(100));
+    }
+
+    @Test
+    public void testRandomBStree_get() {
+        RandomBSTree<Integer, String> tree = new RandomBSTree<>();
+        assertTrue(tree.isEmpty());
+        int values[] = {5, 4, -10, 1, 3, 14, 15, 7, 2};
+        for (int i = 0; i < values.length; i++) {
+            tree.put(i, values[i] + "");
+        }
+        for (int i = 0; i < values.length; i++) {
+            assertEquals(tree.get(i), values[i] + "");
+        }
+        assertEquals(tree.get(-1), null);
+        assertEquals(tree.get(100), null);
+        assertEquals(tree.size(), values.length);
+    }
+
+    @Test
+    public void testRandomBStree_remove() {
+        RandomBSTree<Integer, String> tree = new RandomBSTree<>();
+        assertTrue(tree.isEmpty());
+        int values[] = {5, 4, -10, 1, 3, 14, 15, 7, 2};
+        for (int i = 0; i < values.length; i++) {
+            tree.put(values[i], values[i] + "");
+        }
+        for (int i = 0; i < values.length; i++) {
+            assertEquals(tree.remove(values[i]), values[i] + "");
+        }
+        assertTrue(tree.isEmpty());
+        for (int i = 0; i < values.length; i++) {
+            assertEquals(tree.get(values[i]), null);
+        }
+        assertEquals(tree.get(-1), null);
+        assertEquals(tree.size(), 0);
+    }
+
+    @Test
+    public void testRandomBStree_remove_add() {
+        RandomBSTree<Integer, String> tree = new RandomBSTree<>();
+        assertTrue(tree.isEmpty());
+        int values[] = {5, 4, -10, 1, 3, 14, 15, 7, 2};
+        for (int i = 0; i < values.length; i++) {
+            tree.put(values[i], values[i] + "");
+        }
+        for (int i = 0; i < values.length; i++) {
+            tree.remove(values[i]);
+        }
+        assertEquals(tree.size(), 0);
+        for (int i = 0; i < values.length; i++) {
+            assertEquals(tree.put(values[i], values[i] + ""), null);
+        }
+        assertEquals(tree.size(), values.length);
+        for (int i = 0; i < values.length; i++) {
+            assertEquals(tree.get(values[i]), values[i] + "");
+        }
     }
 }

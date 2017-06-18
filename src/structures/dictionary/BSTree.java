@@ -73,6 +73,8 @@ public class BSTree<K extends Comparable, V> implements Dictionary<K, V> {
             remove(newSubRoot);
             newSubRoot.setLeft(rmNode.left);
             newSubRoot.setRight(rmNode.right);
+            rmNode.left=null;
+            rmNode.right=null;
             replaceSubTree(rmNode, newSubRoot);
         }
         return val;
@@ -111,8 +113,7 @@ public class BSTree<K extends Comparable, V> implements Dictionary<K, V> {
                 par.setRight(v);
             }
         }
-        u.setLeft(null);
-        u.setRight(null);
+        u.parent=null;
     }
 
     /**
@@ -150,18 +151,18 @@ public class BSTree<K extends Comparable, V> implements Dictionary<K, V> {
             }
         }
         V oldVal = null;
-        size++;
         if (status > 0) {
             //add as left child
             TreeNode<K, V> newNode = new TreeNode<K, V>(key, val, par);
             par.setLeft(newNode);
+            size++;
         } else if (status < 0) {
             //add as right child
             TreeNode<K, V> newNode = new TreeNode<K, V>(key, val, par);
             par.setRight(newNode);
+            size++;
         } else {
             //set value
-            size--;
             oldVal = par.value;
             par.value = val;
         }
@@ -170,21 +171,27 @@ public class BSTree<K extends Comparable, V> implements Dictionary<K, V> {
 
 
     private void print_preorder(TreeNode<K, V> node) {
-        System.out.print(node + ", ");
-        print_preorder(node.left);
-        print_preorder(node.right);
+        if (node != null) {
+            print_preorder(node.left);
+            print_preorder(node.right);
+            System.out.print(node + ", ");
+        }
     }
 
     private void print_postorder(TreeNode<K, V> node) {
-        print_preorder(node.left);
-        print_preorder(node.right);
-        System.out.print(node + ", ");
+        if (node != null) {
+            print_preorder(node.left);
+            print_preorder(node.right);
+            System.out.print(node + ", ");
+        }
     }
 
     private void print_inorder(TreeNode<K, V> node) {
-        print_preorder(node.left);
-        System.out.print(node + ", ");
-        print_preorder(node.right);
+        if (node != null) {
+            print_preorder(node.left);
+            System.out.print(node + ", ");
+            print_preorder(node.right);
+        }
     }
 
     private void print_levelorder(TreeNode<K, V> node) {
@@ -193,8 +200,8 @@ public class BSTree<K extends Comparable, V> implements Dictionary<K, V> {
         while (!stack.isEmpty()) {
             node = stack.pop();
             System.out.print("{" + node + "}, ");
-            stack.push(node.left);
             stack.push(node.right);
+            stack.push(node.left);
         }
     }
 
@@ -218,7 +225,8 @@ public class BSTree<K extends Comparable, V> implements Dictionary<K, V> {
         }
     }
 
-    class TreeNode<K extends Comparable, V> {
+
+    protected class TreeNode<K extends Comparable, V> {
         private V value;
         private K key;
         /**
@@ -271,6 +279,9 @@ public class BSTree<K extends Comparable, V> implements Dictionary<K, V> {
                 this.left.parent = null;
             }
             this.left = left;
+            if (this.left != null) {
+                this.left.parent = this;
+            }
         }
 
         public void setRight(TreeNode<K, V> right) {
@@ -278,6 +289,9 @@ public class BSTree<K extends Comparable, V> implements Dictionary<K, V> {
                 this.right.parent = null;
             }
             this.right = right;
+            if (this.right != null) {
+                this.right.parent = this;
+            }
         }
 
         public boolean isLeftChild(TreeNode<K, V> node) {
@@ -302,5 +316,4 @@ public class BSTree<K extends Comparable, V> implements Dictionary<K, V> {
         }
 
     }
-
 }
