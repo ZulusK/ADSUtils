@@ -18,21 +18,7 @@ public class BSTree<K extends Comparable, V> implements Dictionary<K, V> {
 
     @Override
     public boolean contains(K key) {
-        if (key == null) {
-            return false;
-        }
-        TreeNode<K, V> curr = root;
-        while (curr != null) {
-            int status = curr.getKey().compareTo(key);
-            if (status > 0) {
-                curr = curr.getLeft();
-            } else if (status < 0) {
-                curr = curr.right;
-            } else {
-                return true;
-            }
-        }
-        return false;
+        return get(key) != null;
     }
 
     @Override
@@ -46,36 +32,23 @@ public class BSTree<K extends Comparable, V> implements Dictionary<K, V> {
         if (key == null) {
             return null;
         }
-        TreeNode<K, V> curr = root;
-        while (curr != null) {
-            int status = curr.getKey().compareTo(key);
-            if (status > 0) {
-                curr = curr.left;
-            } else if (status < 0) {
-                curr = curr.right;
-            } else {
-                return curr.value;
-            }
-        }
-        return null;
+        return get(root, key);
     }
 
     private V remove(TreeNode<K, V> rmNode) {
         V val = rmNode.getValue();
-        if (rmNode.left == null) {
+        if (rmNode.getLeft() == null) {
             //remove with rigth child
-            replaceSubTree(rmNode, rmNode.right);
-        } else if (rmNode.right == null) {
+            replaceSubTree(rmNode, rmNode.getRight());
+        } else if (rmNode.getRight() == null) {
             //remove with left child child
-            replaceSubTree(rmNode, rmNode.left);
+            replaceSubTree(rmNode, rmNode.getLeft());
         } else {
             //remove with 2 child
-            TreeNode<K, V> newSubRoot = rmNode.right.getMinimum();
+            TreeNode<K, V> newSubRoot = rmNode.getRight().getMinimum();
             remove(newSubRoot);
-            newSubRoot.setLeft(rmNode.left);
-            newSubRoot.setRight(rmNode.right);
-            rmNode.left = null;
-            rmNode.right = null;
+            newSubRoot.setLeft(rmNode.getLeft());
+            newSubRoot.setRight(rmNode.getRight());
             replaceSubTree(rmNode, newSubRoot);
         }
         return val;
@@ -89,11 +62,11 @@ public class BSTree<K extends Comparable, V> implements Dictionary<K, V> {
         TreeNode<K, V> curr = root;
         int status;
         while (curr != null) {
-            status = curr.key.compareTo(key);
+            status = curr.getKey().compareTo(key);
             if (status > 0) {
-                curr = curr.left;
+                curr = curr.getLeft();
             } else if (status < 0) {
-                curr = curr.right;
+                curr = curr.getRight();
             } else {
                 //find node
                 size--;
@@ -107,14 +80,14 @@ public class BSTree<K extends Comparable, V> implements Dictionary<K, V> {
         if (u == root) {
             root = v;
         } else {
-            TreeNode<K, V> par = u.parent;
+            TreeNode<K, V> par = u.getParent();
             if (par.isLeftChild(u)) {
                 par.setLeft(v);
             } else {
                 par.setRight(v);
             }
         }
-        u.parent = null;
+        u.setParent(null);
     }
 
     /**
@@ -130,68 +103,63 @@ public class BSTree<K extends Comparable, V> implements Dictionary<K, V> {
     @Override
     public V put(K key, V val) {
         if (val == null || key == null) return null;
-        //if tree is empty
-        if (root == null) {
-            root = new TreeNode<K, V>(key, val);
-            size++;
-            return null;
-        }
-        //search position to insert
-        TreeNode<K, V> curr = root;
-        TreeNode<K, V> par = null;
-        int status = 0;
-        while (curr != null) {
-            par = curr;
-            status = curr.key.compareTo(key);
-            if (status > 0) {
-                curr = curr.left;
-            } else if (status < 0) {
-                curr = curr.right;
-            } else {
-                break;
-            }
-        }
-        V oldVal = null;
-        if (status > 0) {
-            //add as left child
-            TreeNode<K, V> newNode = new TreeNode<K, V>(key, val, par);
-            par.setLeft(newNode);
-            size++;
-        } else if (status < 0) {
-            //add as right child
-            TreeNode<K, V> newNode = new TreeNode<K, V>(key, val, par);
-            par.setRight(newNode);
-            size++;
-        } else {
-            //set value
-            oldVal = par.getValue();
-            par.value=val;
-        }
+        V oldVal = get(root, key);
+        root = put(root, key, val);
         return oldVal;
     }
 
+    private TreeNode<K, V> put(TreeNode<K, V> parent, K key, V val) {
+        if (parent == null) {
+            //increase tree
+            size++;
+            TreeNode<K, V> newNode = new TreeNode<K, V>(key, val);
+            return newNode;
+        }
+        int cmp = parent.getKey().compareTo(key);
+        if (cmp == 0) {
+            parent.setValue(val); //set value, don't increase tree
+        } else if (cmp > 0) {
+            parent.setLeft(put(parent.getLeft(), key, val));
+        } else {
+            parent.setRight(put(parent.getRight(), key, val));
+
+        }
+        return parent;
+    }
+
+    private V get(TreeNode<K, V> parent, K key) {
+        if (parent == null) return null;
+        int cmp = parent.getKey().compareTo(key);
+        if (cmp < 0) {
+            return get(parent.getRight(), key);
+        } else if (cmp > 0) {
+            return get(parent.getLeft(), key);
+        } else {
+            return parent.getValue();
+        }
+    }
 
     private void print_preorder(TreeNode<K, V> node) {
         if (node != null) {
-            print_preorder(node.left);
-            print_preorder(node.right);
+            print_preorder(node.getLeft());
+            print_preorder(node.getRight());
             System.out.print(node + ", ");
         }
     }
 
     private void print_postorder(TreeNode<K, V> node) {
         if (node != null) {
-            print_preorder(node.left);
-            print_preorder(node.right);
+            print_preorder(node.getLeft());
+            print_preorder(node.getRight());
             System.out.print(node + ", ");
         }
     }
 
     private void print_inorder(TreeNode<K, V> node) {
         if (node != null) {
-            print_preorder(node.left);
+            print_preorder(node.getLeft());
             System.out.print(node + ", ");
-            print_preorder(node.right);
+            print_preorder(node.getRight());
         }
     }
 
@@ -201,8 +169,8 @@ public class BSTree<K extends Comparable, V> implements Dictionary<K, V> {
         while (!stack.isEmpty()) {
             node = stack.pop();
             System.out.print("{" + node + "}, ");
-            stack.push(node.right);
-            stack.push(node.left);
+            stack.push(node.getRight());
+            stack.push(node.getLeft());
         }
     }
 
@@ -225,103 +193,121 @@ public class BSTree<K extends Comparable, V> implements Dictionary<K, V> {
                 break;
         }
     }
-    private class TreeNode<K extends Comparable, V> {
-        private V value;
-        private K key;
-        /**
-         * reference to the right node
-         */
-        private TreeNode<K, V> right;
 
-        /**
-         * reference to the left node
-         */
-        private TreeNode<K, V> left;
-        /**
-         * reference to the parent node
-         */
+}
 
-        private TreeNode<K, V> parent;
+class TreeNode<K extends Comparable, V> {
+    private V value;
+    private K key;
+    /**
+     * reference to the right node
+     */
+    private TreeNode<K, V> right;
 
-        public TreeNode(K key, V e) {
-            value = e;
-            this.key = key;
+    /**
+     * reference to the left node
+     */
+    private TreeNode<K, V> left;
+    /**
+     * reference to the parent node
+     */
+
+    private TreeNode<K, V> parent;
+
+    public TreeNode(K key, V e) {
+        value = e;
+        this.key = key;
+    }
+
+    public TreeNode(K key, V val, TreeNode<K, V> parent) {
+        this(key, val);
+        this.parent = parent;
+    }
+
+    public K getKey() {
+        return key;
+    }
+
+    public V getValue() {
+        return value;
+    }
+
+    public TreeNode<K, V> addLeftChild(K key, V val) {
+        TreeNode<K, V> node = new TreeNode<K, V>(key, val, this);
+        setLeft(node);
+        return node;
+    }
+
+    public TreeNode<K, V> addRightChild(K key, V val) {
+        TreeNode<K, V> node = new TreeNode<K, V>(key, val, this);
+        setRight(node);
+        return node;
+    }
+
+    public void setLeft(TreeNode<K, V> left) {
+        if (this.left != null) {
+            this.left.parent = null;
         }
-
-        public TreeNode(K key, V val, TreeNode<K, V> parent) {
-            this(key, val);
-            this.parent = parent;
+        this.left = left;
+        if (this.left != null) {
+            this.left.parent = this;
         }
+    }
 
-        public K getKey() {
-            return key;
+    public void setRight(TreeNode<K, V> right) {
+        if (this.right != null) {
+            this.right.parent = null;
         }
-
-        public V getValue() {
-            return value;
+        this.right = right;
+        if (this.right != null) {
+            this.right.parent = this;
         }
+    }
 
-        public TreeNode<K, V> addLeftChild(K key, V val) {
-            TreeNode<K, V> node = new TreeNode<K, V>(key, val, this);
-            setLeft(node);
-            return node;
+    public boolean isLeftChild(TreeNode<K, V> node) {
+        return left == node && node != null;
+    }
+
+    public boolean isRightChild(TreeNode<K, V> node) {
+        return node != null && node == right;
+    }
+
+    public TreeNode<K, V> getMinimum() {
+        if (left != null) {
+            return left.getMinimum();
+        } else {
+            return this;
         }
+    }
 
-        public TreeNode<K, V> addRightChild(K key, V val) {
-            TreeNode<K, V> node = new TreeNode<K, V>(key, val, this);
-            setRight(node);
-            return node;
-        }
+    @Override
+    public String toString() {
+        return "[" + key + "] : " + value;
+    }
 
-        public void setLeft(TreeNode<K, V> left) {
-            if (this.left != null) {
-                this.left.parent = null;
-            }
-            this.left = left;
-            if (this.left != null) {
-                this.left.parent = this;
-            }
-        }
+    public TreeNode<K, V> getRight() {
+        return right;
+    }
 
-        public void setRight(TreeNode<K, V> right) {
-            if (this.right != null) {
-                this.right.parent = null;
-            }
-            this.right = right;
-            if (this.right != null) {
-                this.right.parent = this;
-            }
-        }
+    public TreeNode<K, V> getLeft() {
+        return left;
+    }
 
-        public boolean isLeftChild(TreeNode<K, V> node) {
-            return left == node && node != null;
-        }
 
-        public boolean isRightChild(TreeNode<K, V> node) {
-            return node != null && node == right;
-        }
+    public void setValue(V value) {
+        this.value = value;
+    }
 
-        public TreeNode<K, V> getMinimum() {
-            if (left != null) {
-                return left.getMinimum();
-            } else {
-                return this;
-            }
-        }
+    public void setKey(K key) {
+        this.key = key;
+    }
 
-        @Override
-        public String toString() {
-            return "[" + key + "] : " + value;
-        }
+    public TreeNode<K, V> getParent() {
+        return parent;
+    }
 
-        public TreeNode<K, V> getRight() {
-            return right;
-        }
-
-        public TreeNode<K, V> getLeft() {
-            return left;
-        }
-
+    public void setParent(TreeNode<K, V> parent) {
+        this.parent = parent;
     }
 }
 
