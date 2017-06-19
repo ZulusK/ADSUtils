@@ -5,6 +5,7 @@ import structures.deque.ArrayDeque;
 import structures.deque.LinkedDeque;
 import structures.dictionary.BSTree;
 import structures.dictionary.Dictionary;
+import structures.dictionary.RBTree;
 import structures.dictionary.RandomBSTree;
 import structures.hashtable.OAHastable;
 import structures.hashtable.SChHastable;
@@ -1381,8 +1382,7 @@ public class AlgorithmsTest {
     public void testRandomBStree_add_not_uniq() {
         RandomBSTree<Integer, String> tree = new RandomBSTree<>();
         assertTrue(tree.isEmpty());
-//        int values[] = {13, 25, -79, 39, 4, 38, 77, 31, 65,78};
-        int values[]={18,37,84,26,97,48};
+        int values[] = {13, 25, -79, 39, 4, 38, 77, 31, 65,78};
         for (int i = 0; i < values.length; i++) {
             tree.put(values[i], values[i] + "");
         }
@@ -1399,10 +1399,10 @@ public class AlgorithmsTest {
         assertTrue(tree.isEmpty());
         int values[] = {5, 4, -10, 1, 3, 14, 15, 7, 2};
         for (int i = 0; i < values.length; i++) {
-            tree.put(i, values[i] + "");
+            tree.put(values[i], values[i] + "");
         }
         for (int i = 0; i < values.length; i++) {
-            assertTrue(tree.contains(i));
+            assertTrue(tree.contains(values[i]));
         }
         assertFalse(tree.contains(-1));
         assertFalse(tree.contains(100));
@@ -1414,10 +1414,10 @@ public class AlgorithmsTest {
         assertTrue(tree.isEmpty());
         int values[] = {5, 4, -10, 1, 3, 14, 15, 7, 2};
         for (int i = 0; i < values.length; i++) {
-            tree.put(i, values[i] + "");
+            tree.put(values[i], values[i] + "");
         }
         for (int i = 0; i < values.length; i++) {
-            assertEquals(tree.get(i), values[i] + "");
+            assertEquals(tree.get(values[i]), values[i] + "");
         }
         assertEquals(tree.get(-1), null);
         assertEquals(tree.get(100), null);
@@ -1463,4 +1463,62 @@ public class AlgorithmsTest {
             assertEquals(tree.get(values[i]), values[i] + "");
         }
     }
+
+    @Test
+    public void testRBTree_add_uniq() {
+        RBTree<Integer, String> tree = new RBTree<>();
+        assertTrue(tree.isEmpty());
+        int values[] = {5, 4, -10, 1, 3, 14, 15, 7, 2};
+        for (int i = 0; i < values.length; i++) {
+            assertEquals(tree.put(values[i], values[i] + ""), null);
+        }
+        assertEquals(tree.size(), values.length);
+    }
+
+    @Test
+    public void testRBTree_add_not_uniq() {
+        RBTree<Integer, String> tree = new RBTree<>();
+        assertTrue(tree.isEmpty());
+        int values[] = {13, 25, -79, 39, 4, 38, 77, 31, 65,78};
+        for (int i = 0; i < values.length; i++) {
+            tree.put(values[i], values[i] + "");
+        }
+        for (int i = 0; i < values.length; i++) {
+            assertEquals(tree.put(values[i], i + ""), values[i] + "");
+            assertEquals(tree.put(values[i], ""), i + "");
+        }
+        assertEquals(tree.size(), values.length);
+    }
+
+    @Test
+    public void testRBTree_contains() {
+        RBTree<Integer, String> tree = new RBTree<>();
+        assertTrue(tree.isEmpty());
+        int values[] = {5, 4, -10, 1, 3, 14, 15, 7, 2};
+        for (int i = 0; i < values.length; i++) {
+            tree.put(values[i], values[i] + "");
+        }
+        for (int i = 0; i < values.length; i++) {
+            assertTrue(tree.contains(values[i]));
+        }
+        assertFalse(tree.contains(-1));
+        assertFalse(tree.contains(100));
+    }
+
+    @Test
+    public void testRBTree_get() {
+        RBTree<Integer, String> tree = new RBTree<>();
+        assertTrue(tree.isEmpty());
+        int values[] = {5, 4, -10, 1, 3, 14, 15, 7, 2};
+        for (int i = 0; i < values.length; i++) {
+            tree.put(values[i], values[i] + "");
+        }
+        for (int i = 0; i < values.length; i++) {
+            assertEquals(tree.get(values[i]), values[i] + "");
+        }
+        assertEquals(tree.get(-1), null);
+        assertEquals(tree.get(100), null);
+        assertEquals(tree.size(), values.length);
+    }
+
 }

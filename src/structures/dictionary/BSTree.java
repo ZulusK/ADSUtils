@@ -25,7 +25,7 @@ public class BSTree<K extends Comparable, V> implements Dictionary<K, V> {
         while (curr != null) {
             int status = curr.getKey().compareTo(key);
             if (status > 0) {
-                curr = curr.left;
+                curr = curr.getLeft();
             } else if (status < 0) {
                 curr = curr.right;
             } else {
@@ -39,6 +39,7 @@ public class BSTree<K extends Comparable, V> implements Dictionary<K, V> {
     public int size() {
         return size;
     }
+
 
     @Override
     public V get(K key) {
@@ -73,8 +74,8 @@ public class BSTree<K extends Comparable, V> implements Dictionary<K, V> {
             remove(newSubRoot);
             newSubRoot.setLeft(rmNode.left);
             newSubRoot.setRight(rmNode.right);
-            rmNode.left=null;
-            rmNode.right=null;
+            rmNode.left = null;
+            rmNode.right = null;
             replaceSubTree(rmNode, newSubRoot);
         }
         return val;
@@ -113,7 +114,7 @@ public class BSTree<K extends Comparable, V> implements Dictionary<K, V> {
                 par.setRight(v);
             }
         }
-        u.parent=null;
+        u.parent = null;
     }
 
     /**
@@ -163,8 +164,8 @@ public class BSTree<K extends Comparable, V> implements Dictionary<K, V> {
             size++;
         } else {
             //set value
-            oldVal = par.value;
-            par.value = val;
+            oldVal = par.getValue();
+            par.value=val;
         }
         return oldVal;
     }
@@ -224,9 +225,7 @@ public class BSTree<K extends Comparable, V> implements Dictionary<K, V> {
                 break;
         }
     }
-
-
-    protected class TreeNode<K extends Comparable, V> {
+    private class TreeNode<K extends Comparable, V> {
         private V value;
         private K key;
         /**
@@ -315,5 +314,14 @@ public class BSTree<K extends Comparable, V> implements Dictionary<K, V> {
             return "[" + key + "] : " + value;
         }
 
+        public TreeNode<K, V> getRight() {
+            return right;
+        }
+
+        public TreeNode<K, V> getLeft() {
+            return left;
+        }
+
     }
 }
+
